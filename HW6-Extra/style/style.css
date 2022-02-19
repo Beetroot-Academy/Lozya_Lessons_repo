@@ -1,0 +1,96 @@
+*{transition: all .2s ease-in;}
+
+
+
+body {
+    background-color: #3399cc;
+    height: 100vh;
+    box-sizing: border-box;
+    border: #2b81ac solid 14px;
+}
+
+div {
+    border: white 4px solid;
+    border-left: white 7px solid;
+    width: 550px;
+    margin: 25vh auto;
+    box-sizing: border-box;
+}
+
+.card {
+    display: inline-block;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    border: 2px white solid;
+    margin: -1px -4px;
+    text-align: center;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+
+.card:hover{
+    background-color: rgb(196, 65, 196);
+    cursor: pointer;
+    
+}
+.w-25 {
+    width: calc(100% / 4);
+    height: auto;
+}
+.w-50 {
+    width: calc(100% / 2);
+    height: auto;
+}
+.w-100 {
+    width: 100%;
+}
+.deegree {
+    font-size: 18px;
+    font-weight: 400;
+}
+.deegree:after {
+    content: "\2103";
+    font-size: 20px;
+    font-weight: 400;
+    margin: 1vh;
+}
+.wi {
+    font-size: 20px;
+    margin-top: 1vh;
+}
+
+.Lisbon {
+    background-color: #3399cc;
+}
+.Paris {
+    background-color: #33cccc;
+}
+.Belgrade {
+    background-color: #996699;
+}
+
+.Venice {
+    background-color: #c24747;
+}
+.Tel {
+    background-color: #e2674a;
+}
+.Kyiv {
+    background-color: #ffcc66;
+}
+.Amsterdam {
+    background-color: #e2674a;
+}
+.Tokyo {
+    background-color: #669999;
+}
+.San {
+    background-color: #cc6699;
+}
+.Sydney {
+    background-color: #339966;
+}
+.New {
+    background-color: #666699;
+}
