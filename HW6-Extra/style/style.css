@@ -1,20 +1,21 @@
-*{transition: all .2s ease-in;}
-
-
+* {
+    transition: all 0.2s ease-in;
+}
 
 body {
     background-color: #3399cc;
     height: 100vh;
-    box-sizing: border-box;
+    
     border: #2b81ac solid 14px;
+   
 }
 
 div {
-    border: white 4px solid;
-    border-left: white 7px solid;
-    width: 550px;
+    /* border: white 4px solid;
+    border-left: white 7px solid; */
+    width: 490px;
     margin: 25vh auto;
-    box-sizing: border-box;
+    
 }
 
 .card {
@@ -23,15 +24,17 @@ div {
     font-size: 16px;
     font-weight: 700;
     border: 2px white solid;
-    margin: -1px -4px;
+    margin: 0 -2px;
     text-align: center;
     padding-top: 3vh;
     padding-bottom: 3vh;
+    box-sizing: border-box;
 }
 
-.card:hover{
-    background-color: rgb(196, 65, 196);
+.card:hover {
     cursor: pointer;
+    opacity: 0.5;
+    border: white 2px solid;
     
 }
 .w-25 {
