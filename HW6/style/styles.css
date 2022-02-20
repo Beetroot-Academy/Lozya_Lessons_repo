@@ -1,0 +1,141 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+header {
+    margin-bottom: 8vh;
+    margin-top: 3vh;
+    padding-top: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    display: inline-block;
+    padding-top: 1vh;
+}
+h1 {
+    visibility: hidden;
+    font-size: 0px;
+}
+
+li {
+    display: inline-block;
+}
+
+ul {
+    display: inline-block;
+}
+nav {
+    float: right;
+    padding-top: 2vh;
+}
+.header-links {
+    padding-right: 8vh;
+}
+.no-btn {
+    color: #2f281e;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+li.no-btn ~ li.no-btn {
+    margin-left: 4vh;
+}
+li.btn ~ li.btn {
+    margin-left: 2vh;
+}
+
+.white-btn,
+.orange-btn {
+    text-decoration: none;
+    padding: 10px 25px;
+}
+.white-btn {
+    color: #173a56;
+    border: 1px solid #bcd0e5;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.orange-btn {
+    background-color: #ff9900;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+}
+
+main {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 54px;
+    color: #2f281e;
+}
+.first-article {
+    float: left;
+    width: 45%;
+    margin-top: 8vh;
+}
+.peoples {
+    float: right;
+    width: 75vh;
+}
+p.first {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: #544837;
+    padding-top: 4vh;
+    width: 83%;
+}
+.btn-under-text1 {
+    margin-top: 7vh;
+}
+.btn-under ~ .btn-under {
+    margin-left: 3vh;
+}
+
+.btn1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    border: none;
+    background: #ff9900;
+    border-radius: 4px;
+    padding: 15px 40px;
+}
+
+.video-link {
+    display: inline-block;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #ff9900;
+}
+span.underline {
+    text-decoration: underline;
+}
+.video-link::before {
+    content: "▶";
+    text-decoration: none;
+    font-size: 25px;
+    padding-right: 10px;
+}
