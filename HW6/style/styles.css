@@ -30,17 +30,17 @@ nav {
     float: right;
     padding-top: 2vh;
 }
-.header-links {
+.header-link {
     padding-right: 8vh;
 }
-.no-btn {
-    color: #2f281e;
-    font-size: 14px;
-    font-weight: 400;
-    text-decoration: none;
-}
 
-li.no-btn ~ li.no-btn {
+a{
+color: #2f281e;
+font-size: 14px;
+font-weight: 400;
+text-decoration: none;}
+
+li.item1 ~ li.item1 {
     margin-left: 4vh;
 }
 li.btn ~ li.btn {
@@ -71,11 +71,9 @@ li.btn ~ li.btn {
     color: white;
 }
 
-main {
+.wrapper {
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
+    margin: 0 auto;}
 
 h2 {
     font-style: normal;

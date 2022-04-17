@@ -63,37 +63,35 @@ div {
     margin-top: 1vh;
 }
 
-.Lisbon {
+.blue {
     background-color: #3399cc;
 }
-.Paris {
+.aqua {
     background-color: #33cccc;
 }
-.Belgrade {
+.purple {
     background-color: #996699;
 }
 
-.Venice {
+.red {
     background-color: #c24747;
 }
-.Tel {
+.orange {
     background-color: #e2674a;
 }
-.Kyiv {
+.yellow {
     background-color: #ffcc66;
 }
-.Amsterdam {
-    background-color: #e2674a;
-}
-.Tokyo {
+
+.durty-green {
     background-color: #669999;
 }
-.San {
+.pink {
     background-color: #cc6699;
 }
-.Sydney {
+.green {
     background-color: #339966;
 }
-.New {
+.violet {
     background-color: #666699;
 }
