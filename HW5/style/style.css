@@ -67,9 +67,14 @@ input[type="checkbox"] {
 
 li:nth-child(odd) {
     background-color: #88839e;
+    border-top: #88839e 3px solid;
+    border-bottom: #88839e 3px solid;
+
 }
 li:nth-child(even) {
     background-color: #7a7593;
+    border-top: #7a7593 3px  solid ;
+    border-bottom: #7a7593 3px  solid ;
 }
 
 li:hover {
@@ -83,9 +88,10 @@ input[type="checkbox"]:checked + .done {
 }
 
 button {
+    display: inline-block;
     width: 550px;
     margin-top: 10vh;
-    padding-top: 45px;
+    padding: 15px;
     background-color: #4a4f56;
     color: #ff8984;
     border-style: none;
