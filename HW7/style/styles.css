@@ -207,9 +207,10 @@ div.item>img{
     border-radius: 4px ;
     
 }
-hr{
-    border-color: #bcd0e58b;
-    color: #bcd0e58b;
+
+.ftr{
+    margin-top: 100px;
+    border-top: #bcd0e57f solid 1px;
 }
 .footer-flex{
     height: 250px;
@@ -218,6 +219,7 @@ hr{
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    
 }
 .footer-logo{
     align-self: flex-start;
