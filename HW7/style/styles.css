@@ -5,11 +5,10 @@ header {
     margin-bottom: 8vh;
     margin-top: 3vh;
     padding-top: 10px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
 }
-
+header>.wrapper{
+    overflow: hidden;
+}
 .logo {
     display: inline-block;
     padding-top: 1vh;
@@ -51,6 +50,7 @@ li.btn ~ li.btn {
 .orange-btn {
     text-decoration: none;
     padding: 10px 25px;
+    display: block;
 }
 .white-btn {
     color: #173a56;
@@ -85,14 +85,17 @@ li.btn ~ li.btn {
 }
 .first-article {
     float: left;
-    width: 45%;
+    width: 50%;
     margin-top: 8vh;
     
 }
 .peoples {
     float: right;
-    width: 80vh;
+    width: 50%;
     
+}
+.peoples>img{
+    max-width: 100%;
 }
 .first-section{
     overflow: auto;
