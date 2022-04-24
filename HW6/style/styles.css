@@ -1,9 +1,9 @@
-* {
+body {
     font-family: "Poppins", sans-serif;
 }
-header {
-    margin-bottom: 8vh;
-    margin-top: 3vh;
+.header__wrapper{
+    margin-bottom: 50px;
+    margin-top: 20px;
     padding-top: 10px;
     width: 80%;
     margin-left: auto;
@@ -12,7 +12,7 @@ header {
 
 .logo {
     display: inline-block;
-    padding-top: 1vh;
+    padding-top: 10px;
 }
 h1 {
     visibility: hidden;
@@ -28,10 +28,10 @@ ul {
 }
 nav {
     float: right;
-    padding-top: 2vh;
+    padding-top: 10px;
 }
 .header-link {
-    padding-right: 8vh;
+    padding-right: 50px;
 }
 
 a{
@@ -41,10 +41,10 @@ font-weight: 400;
 text-decoration: none;}
 
 li.item1 ~ li.item1 {
-    margin-left: 4vh;
+    margin-left: 25px;
 }
 li.btn ~ li.btn {
-    margin-left: 2vh;
+    margin-left: 10px;
 }
 
 .white-btn,
@@ -73,7 +73,9 @@ li.btn ~ li.btn {
 
 .wrapper {
     width: 80%;
-    margin: 0 auto;}
+    margin: 0 auto;
+    overflow: hidden;
+}
 
 h2 {
     font-style: normal;
@@ -85,25 +87,25 @@ h2 {
 .first-article {
     float: left;
     width: 45%;
-    margin-top: 8vh;
+    margin-top: 50px;
 }
 .peoples {
     float: right;
-    width: 75vh;
+    width: 50%;
 }
 p.first {
     font-weight: normal;
     font-size: 18px;
     line-height: 28px;
     color: #544837;
-    padding-top: 4vh;
+    padding-top: 25px;
     width: 83%;
 }
 .btn-under-text1 {
-    margin-top: 7vh;
+    margin-top: 45px;
 }
 .btn-under ~ .btn-under {
-    margin-left: 3vh;
+    margin-left: 20px;
 }
 
 .btn1 {
@@ -136,4 +138,8 @@ span.underline {
     text-decoration: none;
     font-size: 25px;
     padding-right: 10px;
+}
+
+.peoples--img{
+    max-width: 100%;
 }
