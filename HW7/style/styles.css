@@ -2,8 +2,8 @@
     font-family: "Poppins", sans-serif;
 }
 header {
-    margin-bottom: 8vh;
-    margin-top: 3vh;
+    margin-bottom: 50px;
+    margin-top: 20px;
     padding-top: 10px;
 }
 header>.wrapper{
@@ -11,7 +11,7 @@ header>.wrapper{
 }
 .logo {
     display: inline-block;
-    padding-top: 1vh;
+    padding-top: 10px;
 }
 h1 {
     visibility: hidden;
@@ -27,10 +27,10 @@ ul {
 }
 nav {
     float: right;
-    padding-top: 2vh;
+    padding-top: 20px;
 }
 .header-link {
-    padding-right: 8vh;
+    padding-right: 50px;
 }
 
 a{
@@ -40,10 +40,10 @@ font-weight: 400;
 text-decoration: none;}
 
 li.item1 ~ li.item1 {
-    margin-left: 4vh;
+    margin-left: 35px;
 }
 li.btn ~ li.btn {
-    margin-left: 2vh;
+    margin-left: 20px;
 }
 
 .white-btn,
@@ -86,7 +86,7 @@ li.btn ~ li.btn {
 .first-article {
     float: left;
     width: 50%;
-    margin-top: 8vh;
+    margin-top: 50px;
     
 }
 .peoples {
@@ -105,14 +105,14 @@ p.first-text {
     font-size: 18px;
     line-height: 28px;
     color: #544837;
-    padding-top: 4vh;
+    padding-top: 25px;
     width: 83%;
 }
 .btn-under-text1 {
-    margin-top: 7vh;
+    margin-top: 45px;
 }
 .btn-under ~ .btn-under {
-    margin-left: 3vh;
+    margin-left: 20px;
 }
 
 .btn1 {
