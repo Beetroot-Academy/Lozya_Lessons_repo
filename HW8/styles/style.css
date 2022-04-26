@@ -225,6 +225,20 @@ button>.fa-circle-arrow-right{
 
 
 }
+.help-button__link{
+    width: 60px;
+    display: block;
+    left: 95% ;
+    position: relative;
+    
+}
+
+.help-button{
+    width: 100%;
+    position: sticky;
+    top:90%;
+
+}
 
 
 
@@ -250,7 +264,7 @@ button>.fa-circle-arrow-right{
     text-align: center;
     margin-top: 5px;
 }
-.item>p{
+.item__description{
     font-family: 'Proxima Nova';
     font-style: normal;
     font-weight: 400;
@@ -281,7 +295,7 @@ button>.fa-circle-arrow-right{
     transition: transform .4s;
 
 }
-.item>p{
+.item__description{
     width: 80%;
     margin: 0 auto;
 }
@@ -291,7 +305,7 @@ button>.fa-circle-arrow-right{
 .flex-section2 {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 200px;
+    padding-bottom: 200px;
     margin-top: 60px;
 }
 
@@ -329,17 +343,6 @@ button>.fa-circle-arrow-right{
 
 }
 
-/* .item:hover{
-    transform: rotateY(180deg);
-}
-.item--no-transform{
-    display: inline-block;
-    transition: transform 2s;
-}
-.item--no-transform:hover{
-        transform: rotateY(180deg);
-        display: inline-block;
-} */
 .item--no-flip-bug{
             display: inline-block;
                 width: 23%;
