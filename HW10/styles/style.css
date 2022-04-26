@@ -39,6 +39,9 @@
     width: 80%;
     margin: 0 auto;
 }
+section{
+    z-index: 1;
+}
 
 /* Шапка сайта */
 .header--background{
@@ -113,7 +116,7 @@ h1{
     transition: color 0.5s;
     color: #AAAAAB;
     font-size: 30px;
-    margin-left: 75px;
+    margin-left: 90px;
 }
 
 .menu:hover {
@@ -121,17 +124,26 @@ h1{
     cursor: pointer;
 }
 
+.subheader{
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 52px;
+    color: #56597A;
+    text-align: center;
+    margin-top: 5px;
+}
 /* Секция Creative Agency */
 .about-section {
     margin-top: 200px;
 }
 
-.section1-text>h2::before {
+.about-section__header::before {
     content: "__";
     font-size: 30px;
     font-weight: 800;
 }
-.section1-text>h2{
+.section-header{
     color: #F78CB6;
     font-family: 'Circular Std';
     font-style: normal;
@@ -150,7 +162,7 @@ h1{
 .flex-img>img{
     max-width: 100%;
 }
-.section1-text>h3{
+.about-section__subheader{
     font-family: 'Circular Std';
     font-style: normal;
     font-weight: 700;
@@ -159,7 +171,7 @@ h1{
     margin-top: 30px;
 }
 
-.section1-text>p{
+.article{
     font-family: 'Proxima Nova';
     font-style: normal;
     font-weight: 400;
@@ -171,7 +183,7 @@ h1{
     margin-top: 30px;
 
 }
-.section1-text>button{
+.button{
     display: inline-block;
     margin-top: 40px;
     font-family: 'Circular Std';
@@ -180,7 +192,6 @@ h1{
     font-size: 20px;
     line-height: 30px;
     color: #FFFFFF;
-    border: none ;
     border-radius: 4px;
     background-color: #F78BB6;
     width: 210px;
@@ -188,12 +199,11 @@ h1{
     border: #F78BB6 solid 2px;
     transition: all 0.7s;
 }
-button>.fa-circle-arrow-right{
+.button__ico{
     font-size: 20px;
     
 }
-.section1-text>button:hover{
-    transition: all 0.7s;
+.button:hover{
     background-color: #FFFFFF;
     border: #F78BB6 solid 2px;
     color: #F78BB6;
@@ -207,8 +217,8 @@ button>.fa-circle-arrow-right{
     background-image: url(../assets/bg_vector.png);
     display: block;
     position: absolute;
-    top: -35px;
-    right: -50px;
+    top: 0;
+    right: 0;
     z-index: 2
 }
 .our-services-section::before{
@@ -219,7 +229,7 @@ button>.fa-circle-arrow-right{
         background-image: url(../assets/bg_bloob_vector.png);
         display: block;
         position: sticky;
-        top:100px;
+        top:0px;
         left: 0px;
         z-index: 2
 
@@ -237,6 +247,7 @@ button>.fa-circle-arrow-right{
     width: 100%;
     position: sticky;
     top:90%;
+    z-index: -2;
 
 }
 
@@ -244,7 +255,7 @@ button>.fa-circle-arrow-right{
 
 /* Секция Our Services */
 
-.our-services-section>div>h2{
+.bordered-header{
     font-family: 'Circular Std';
     font-style: normal;
     font-weight: 500;
@@ -254,15 +265,6 @@ button>.fa-circle-arrow-right{
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-top: 0px;
     text-align: center;
-}
-.our-services-section>div>h3{
-    font-family: 'Circular Std';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 52px;
-    color: #56597A;
-    text-align: center;
-    margin-top: 5px;
 }
 .item__description{
     font-family: 'Proxima Nova';
@@ -359,4 +361,136 @@ button>.fa-circle-arrow-right{
 }
 .item--no-flip-bug:hover .item__link--active{
     transform: rotateY(180deg);
+}
+
+/* Design Things */
+.design-things{
+    display: block;
+}
+.design-things__wrapper{
+    display: flex;
+    padding-bottom: 260px;
+}
+.design-things__img-container{
+    width: 50%;
+}
+.design-things__img-container__img{
+    max-width: 100%;
+}
+.design-things__content{
+    width: calc(50%-80px);
+    margin-left: 80px;
+}
+.design-things__content__section-header,.design-things__content__subheader, .design-things__content__article{
+    text-align: left;
+}
+.design-things__subheader{
+    width: 480px;
+}
+.design-things::before {
+    content: '';
+    height: 310px;
+    width: 150px;
+    background-size: cover;
+    background-image: url(../assets/bg_bloob_vector_right.png);
+    display: block;
+    position: sticky;
+    top: 150px;
+    left: 100%;
+    z-index: 1;
+}
+/* Our Teamwork */
+.our-teamwork{
+    display: block;
+
+}
+.our-teamwork__wrapper{
+    display: flex;
+        padding-bottom: 260px;
+}
+.our-teamwork__img-container__img{
+    max-width: 100%;
+}
+
+.our-teamwork__img-container{
+    order: 2;
+    width: 1000px;
+    margin-left: 100px;
+}
+.our-teamwork__content{
+    width: calc(50%-100px);
+
+}
+.our-teamwork__content__subheader{
+    text-align: left;
+}
+.our-teamwork::before {
+    content: '';
+    height: 310px;
+    width: 170px;
+    background-size: cover;
+    background-image: url(../assets/bg_bloob_vector.png);
+    display: block;
+    position: sticky;
+    top: 100px;
+    left: 0px;
+    z-index: 2;
+}
+
+/* testimonial */
+
+.testimonial{
+    display: block;
+}
+.testimonial__wrapper{
+    display: flex;
+    
+}
+.testimonial__img-container{
+    width: 60%;
+}
+.testimonial__img-container__img{
+    max-width: 100%;
+}
+.testimonial__content{
+    width: 50%;
+}
+.testimonial__content__article{
+    width: 80%;
+}
+.testimonial__content__subheader{
+    text-align: left;
+}
+.testimonial__client{
+    padding-top: 50px;
+}
+.testimonial__client__name{
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    color: #56597A;
+}
+.testimonial__client__nav{
+    display: flex;
+    justify-content: space-between;
+}
+.testimonial__client__nav__location{
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #ABABAB
+}
+.testimonial__client__nav__arrows__left-arrow--non-active{
+    color: rgba(86, 89, 122, 0.6);
+    cursor: pointer;
+    display: inline-block;
+}
+.testimonial__client__nav__arrwos__right-arrow--active{
+    color: #F78CB6;
+    cursor: pointer;
+    display: inline-block;
 }
