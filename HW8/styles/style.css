@@ -275,9 +275,10 @@ button>.fa-circle-arrow-right{
 .item {
     background-color: #FFF1F9;
     text-align: center;
-    width: 23%;
+
     height: 280px;
     border-radius: 8px;
+    transition: transform .4s;
 
 }
 .item>p{
@@ -323,7 +324,36 @@ button>.fa-circle-arrow-right{
     padding-left: 5px;
 }
 
-.active>span,.active>h4, .active>p {
+.item__description--active, .ico--active, .name-of-items--active{
     color: #FFFFFF;
 
+}
+
+/* .item:hover{
+    transform: rotateY(180deg);
+}
+.item--no-transform{
+    display: inline-block;
+    transition: transform 2s;
+}
+.item--no-transform:hover{
+        transform: rotateY(180deg);
+        display: inline-block;
+} */
+.item--no-flip-bug{
+            display: inline-block;
+                width: 23%;
+                background-color: transparent;
+}
+.item--no-flip-bug:hover .item{
+    transform: rotateY(180deg);
+    display: inline-block;
+
+}
+.item--no-flip-bug:hover .item .item--no-transform{
+    transform: rotateY(180deg);
+    display: inline-block;
+}
+.item--no-flip-bug:hover .item__link--active{
+    transform: rotateY(180deg);
 }
