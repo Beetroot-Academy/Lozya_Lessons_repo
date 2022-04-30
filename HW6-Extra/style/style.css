@@ -5,17 +5,19 @@
 body {
     background-color: #3399cc;
     height: 100vh;
-    
+    box-sizing: border-box;
     border: #2b81ac solid 14px;
    
 }
 
 div {
-    /* border: white 4px solid;
-    border-left: white 7px solid; */
+   
     width: 490px;
-    margin: 25vh auto;
+    margin: 180px auto;
     
+}
+span{
+    display: block;
 }
 
 .card {
@@ -26,8 +28,8 @@ div {
     border: 2px white solid;
     margin: 0 -2px;
     text-align: center;
-    padding-top: 3vh;
-    padding-bottom: 3vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
     box-sizing: border-box;
 }
 
@@ -51,16 +53,17 @@ div {
 .deegree {
     font-size: 18px;
     font-weight: 400;
+    display: inline-block;
 }
 .deegree:after {
     content: "\2103";
     font-size: 20px;
     font-weight: 400;
-    margin: 1vh;
+    margin: 5px;
 }
 .wi {
     font-size: 20px;
-    margin-top: 1vh;
+    margin-top: 5px;
 }
 
 .blue {
