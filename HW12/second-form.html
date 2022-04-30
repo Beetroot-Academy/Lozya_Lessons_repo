@@ -13,6 +13,7 @@
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
             rel="stylesheet"
         />
+        <script src="https://kit.fontawesome.com/71e4d3417c.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -31,18 +32,20 @@
                                         class="img-container__img"
                                     />
                                 </div>
-                                <label
-                                    class="subtitle sign-up-section__subtitle"
-                                    for="first-name"
-                                >
-                                </label>
+                                <div class="label-upload">
+                                    <label
+                                        class="subtitle sign-up-section__subtitle label-upload--custom"
+                                        for="photo"
+                                    >
+                                    </label>
+                                </div>
                                 <input
                                     type="file"
                                     name="photo"
                                     id="photo"
                                     tabindex="1"
                                 />
-                                <button>trash bin</button>
+                                <button class="button-trash"> <span class="fa-solid fa-trash button-trash__ico"></span></button>
                             </div>
                             <div class="form-group sign-up-section--name">
                                 <label
@@ -124,6 +127,10 @@
                                         id="phone"
                                         tabindex="7"
                                     />
+                            </div>
+                            <div class="form-button">
+                                <button type="submit" class="button">Submit</button>
+                                <button type="reset" class="button button--white">Reset</button>
                             </div>
                         </div>
                     </for>
