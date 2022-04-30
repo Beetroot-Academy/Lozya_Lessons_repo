@@ -23,9 +23,7 @@ input:focus{
     border: #007BFF 1px solid;
     box-sizing: border-box;
 }
-input[type="radio"]{
-    display: none;
-}
+
 .sign-up-section{
     height: 100vh;
         position: relative;
@@ -132,7 +130,7 @@ label{
     text-align: center;
 }
 /* 2-nd html doc */
-.sign-up-section__wrapper{
+.profile-section__wrapper{
     padding-bottom: 180px;
 }
 .form-group--photo{
