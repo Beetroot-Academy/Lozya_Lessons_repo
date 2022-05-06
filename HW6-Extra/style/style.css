@@ -1,0 +1,100 @@
+* {
+    transition: all 0.2s ease-in;
+}
+
+body {
+    background-color: #3399cc;
+    height: 100vh;
+    box-sizing: border-box;
+    border: #2b81ac solid 14px;
+   
+}
+
+div {
+   
+    width: 490px;
+    margin: 180px auto;
+    
+}
+span{
+    display: block;
+}
+
+.card {
+    display: inline-block;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    border: 2px white solid;
+    margin: 0 -2px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.card:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    border: white 2px solid;
+    
+}
+.w-25 {
+    width: calc(100% / 4);
+    height: auto;
+}
+.w-50 {
+    width: calc(100% / 2);
+    height: auto;
+}
+.w-100 {
+    width: 100%;
+}
+.deegree {
+    font-size: 18px;
+    font-weight: 400;
+    display: inline-block;
+}
+.deegree:after {
+    content: "\2103";
+    font-size: 20px;
+    font-weight: 400;
+    margin: 5px;
+}
+.wi {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.blue {
+    background-color: #3399cc;
+}
+.aqua {
+    background-color: #33cccc;
+}
+.purple {
+    background-color: #996699;
+}
+
+.red {
+    background-color: #c24747;
+}
+.orange {
+    background-color: #e2674a;
+}
+.yellow {
+    background-color: #ffcc66;
+}
+
+.durty-green {
+    background-color: #669999;
+}
+.pink {
+    background-color: #cc6699;
+}
+.green {
+    background-color: #339966;
+}
+.violet {
+    background-color: #666699;
+}
