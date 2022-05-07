@@ -1,0 +1,44 @@
+@import "variable";
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+    display: block;
+
+}
+use{
+    max-width: 100%;
+}
+li{
+    display: block;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.text{
+    @include font (17px);
+    font-weight: 300;
+}
+.title{
+    @include font(90px)
+
+}
+.btn{
+    display: block;
+    width: 200px;
+    height: 55px;
+    border: 2px solid transparent;
+    @include font (20px);
+    text-transform: uppercase;
+    color: $white;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in;
+    
+}
