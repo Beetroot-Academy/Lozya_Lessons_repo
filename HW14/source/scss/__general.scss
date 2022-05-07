@@ -34,6 +34,20 @@
     font-display: swap;
 }
 
+$descktop: 1200px;
+$small-descktop: 992px;
+$tablet: 768px;
+$mobile: 576px;
+
+@mixin flex-row{
+    display:flex;
+    flex-direction: row;
+    flex: 1;
+    @media screen and (max-width: $tablet) {
+        flex-direction: column;
+    }
+}
+
 img{
     max-width: 100%;
 }
@@ -81,7 +95,7 @@ margin-top: 5px;
     line-height: 32px;
     letter-spacing: 0.02em;
     color: #919299;
-    width: 500px;
+
     margin-top: 30px;
 
 }

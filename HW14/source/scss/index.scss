@@ -87,15 +87,20 @@
         }
     &__title::before{
         content: "";
-        border-bottom: 2px solid #F78CB6;
-        width: 50px;
+        display: inline-block;
+        border-bottom: 3px solid #F78CB6;
+        width: 20px;
         height: 3px;
     }
-    &--flex{
-        display: flex;
+
+    &__wrapper{
+        @include flex-row;
     }
-    &__img{
-        width: 800px;
+    &__img, &__content{
+        width: 50%;
+        @media screen and (max-width:$tablet) {
+            width: 100%;
+        }
     }
 }
 
@@ -113,8 +118,8 @@
         z-index: 2
         }
     &--flex{
-        display: flex;
-        justify-content: space-between;
+        @include flex-row;
+        gap: 20px;
         padding-bottom: 200px;
         margin-top: 60px;
         }
@@ -124,20 +129,19 @@
 .item {
     background-color: #FFF1F9;
     text-align: center;
+
     height: 280px;
     border-radius: 8px;
     transition: transform .4s;
     &--no-flip-bug{
         display: inline-block;
-        width: 23%;
         background-color: transparent;
         &:hover .item {
             transform: rotateY(180deg);
-            display: inline-block;
 
             & .item--no-transform {
                 transform: rotateY(180deg);
-                display: inline-block;
+
                 }
             }
         &:hover .item__link--active {
@@ -158,7 +162,6 @@
     }
 
     &__description {
-        width: 80%;
         margin: 0 auto;
         &--active{
             color: #FFFFFF;
@@ -204,26 +207,37 @@
             z-index: 1;
         }
     &__wrapper {
-        display: flex;
-        padding-bottom: 260px;
+        justify-content: space-between;
+        gap: 100px;
+        @include flex-row;
+
     } 
-    &__img-container {
-        width: 50%;
-    }
-    &__content {
-        width: calc(50% - 80px);
-        margin-left: 80px;
-    }
     &__title {
         text-align: left;
+        @media screen and (max-width:$tablet){ 
+            text-align: center;
+        }
     }
     &__subtitle {
         text-align: left;
-        width: 480px;
+        @media screen and (max-width:$tablet) {
+                text-align: center;
+            }
     }
     &__article {
         text-align: left;
+        @media screen and (max-width:$tablet) {
+                text-align: center;
+            }
     }
+        &__img,
+        &__content {
+            width: 50%;
+    
+            @media screen and (max-width:$tablet) {
+                width: 100%;
+            }
+        }
 
 }
 
@@ -241,43 +255,56 @@
             z-index: 2;
         }
     &__wrapper {
-        display: flex;
+        @include flex-row;
+        gap: 100px;
         padding-bottom: 260px;
     }
     &__img-container {
             order: 2;
-            width: 50%;
             margin-left: 100px;
     }
-    &__content {
-        width: 50%;
-    }
-    &__subtitle {
-        text-align: left;
-    }
+        &__subtitle,
+        &__title {
+        
+         text-align: left;
+        @media screen and (max-width:$tablet) {
+        text-align: center;
+        }
+        }
+        &__img,
+        &__content {
+            width: 50%;
+    
+            @media screen and (max-width:$tablet) {
+                width: 100%;
+            }
+        }
 }
 
 .testimonial{
+    &__img,
+        &__content {
+            width: 50%;
+    
+            @media screen and (max-width:$tablet) {
+                width: 100%;
+            }
+        }
     &__wrapper {
-        display: flex;
+        @include flex-row;
+        gap: 100px;
     }
     
-    &__img-container {
-        width: 60%;
-    }
     
-    &__content {
-        width: 50%;
-    }
+    &__subtitle,&__title {
 
-    
-    &__subtitle {
         text-align: left;
+        @media screen and (max-width:$tablet) {
+                text-align: center;
+            }
     }
     
-    &__article {
-        width: 80%;
-    }
+
     
     &__client {
         padding-top: 50px;
@@ -318,5 +345,13 @@
         cursor: pointer;
         display: inline-block;
     }
+        &__img,
+        &__content {
+            width: 50%;
+    
+            @media screen and (max-width:$tablet) {
+                width: 100%;
+            }
+        }
 }
 
