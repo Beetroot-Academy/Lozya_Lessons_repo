@@ -3,7 +3,7 @@
 .header {
     &__background{
         width: 100vw;
-        height: 110px;
+        height: 96px;
         background-color: #FFFFFF;
         position: fixed;
         top: 0%;
@@ -17,6 +17,7 @@
         position: fixed;
         top: 0px;
         z-index: 4;
+        width: 80%;
     }
     &__title{
         font-family: 'Josefin Sans',
@@ -25,6 +26,38 @@
         font-size: 30px;
     }
 }
+
+.burger {
+    display: none;
+    height: 40px;
+    // display: flex;
+    flex-direction: column;
+    .bar {
+        display: block;
+            width: 30px;
+            height: 2px;
+            margin: 5px auto;
+            background-color: #AAAAAB;
+            transition: transform 0.3s linear, opacity 0.3s linear, background-color 0.3s linear;
+    }
+    &.active .bar:nth-child(1){
+        transform: translateY(9px) rotate(45deg);
+        background-color: #e65992a2;
+    }
+    &.active .bar:nth-child(2) {
+    opacity: 0;
+    }
+    &.active .bar:nth-child(3) {
+    transform: translateY(-15px) rotate(-45deg);
+    background-color: #e65992a2;
+    }
+    &.active{
+        display: flex;
+    }
+}
+
+
+
 .logo{
     &--pink{
         color: #F087B1;
@@ -37,14 +70,22 @@
 
 
 .nav {
-    margin-left: 375px;
+    display: flex;
+    align-items: center;
+    gap: 75px;
     margin-top: 6px;
-    &__item{
-        display: inline-block;
-
+    &__list{
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+        gap: 75px;
+        
     }
-    &__item~&__item{
-    margin-left: 75px;   
+    &__item{
+        padding: 5px 15px;
+        &:hover .nav__link {
+                color: #56597A;
+            }
     }
     &__link{
         transition: color 0.5s;
@@ -53,21 +94,41 @@
         font-family: 'Circular Std Book';
         font-style: normal;
         font-weight: 500;
-        &:hover{
-            color: #56597A;
-        }
+        
     }
 }
-
-.menu {
-    transition: color 0.5s;
-    color: #AAAAAB;
-    font-size: 30px;
-    margin-left: 90px;
-    &:hover {
-        color: #56597A;
+@media screen and (max-width:$tablet) {
+    .burger{
+        display: flex;
         cursor: pointer;
-        }
+    }
+                .nav__list {
+                        padding: 20px 0;
+                        position: absolute;
+                        top: 100%;
+                        left: -20%;
+                        width: 140%;
+                        opacity: 0;
+                        background: #e65992a2;
+                        
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        transition: opacity 0.3s ease-in-out;
+                        
+                        &.active {
+                            display: flex;
+                            
+                            opacity: 1;
+                           
+                        }
+                    }
+    
+    .nav__link{
+        color:#FFFFFF;
+        font-size: 25px;
+        font-weight: bold;
+    }
 }
 
 

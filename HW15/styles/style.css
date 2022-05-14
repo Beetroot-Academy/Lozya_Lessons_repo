@@ -136,7 +136,7 @@ a {
 
 .header__background {
   width: 100vw;
-  height: 110px;
+  height: 96px;
   background-color: #FFFFFF;
   position: fixed;
   top: 0%;
@@ -150,11 +150,40 @@ a {
   position: fixed;
   top: 0px;
   z-index: 4;
+  width: 80%;
 }
 .header__title {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 700;
   font-size: 30px;
+}
+
+.burger {
+  display: none;
+  height: 40px;
+  flex-direction: column;
+}
+.burger .bar {
+  display: block;
+  width: 30px;
+  height: 2px;
+  margin: 5px auto;
+  background-color: #AAAAAB;
+  transition: transform 0.3s linear, opacity 0.3s linear, background-color 0.3s linear;
+}
+.burger.active .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+  background-color: #e65992a2;
+}
+.burger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.burger.active .bar:nth-child(3) {
+  transform: translateY(-15px) rotate(-45deg);
+  background-color: #e65992a2;
+}
+.burger.active {
+  display: flex;
 }
 
 .logo--pink {
@@ -165,14 +194,22 @@ a {
 }
 
 .nav {
-  margin-left: 375px;
+  display: flex;
+  align-items: center;
+  gap: 75px;
   margin-top: 6px;
 }
-.nav__item {
-  display: inline-block;
+.nav__list {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  gap: 75px;
 }
-.nav__item ~ .nav__item {
-  margin-left: 75px;
+.nav__item {
+  padding: 5px 15px;
+}
+.nav__item:hover .nav__link {
+  color: #56597A;
 }
 .nav__link {
   transition: color 0.5s;
@@ -182,21 +219,37 @@ a {
   font-style: normal;
   font-weight: 500;
 }
-.nav__link:hover {
-  color: #56597A;
-}
 
-.menu {
-  transition: color 0.5s;
-  color: #AAAAAB;
-  font-size: 30px;
-  margin-left: 90px;
-}
-.menu:hover {
-  color: #56597A;
-  cursor: pointer;
-}
+@media screen and (max-width: 768px) {
+  .burger {
+    display: flex;
+    cursor: pointer;
+  }
 
+  .nav__list {
+    padding: 20px 0;
+    position: absolute;
+    top: 100%;
+    left: -20%;
+    width: 140%;
+    opacity: 0;
+    background: #e65992a2;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .nav__list.active {
+    display: flex;
+    opacity: 1;
+  }
+
+  .nav__link {
+    color: #FFFFFF;
+    font-size: 25px;
+    font-weight: bold;
+  }
+}
 .hero {
   margin-top: 200px;
 }
