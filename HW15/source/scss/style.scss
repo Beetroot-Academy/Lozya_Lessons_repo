@@ -163,7 +163,15 @@
     &__wrapper{
         @include flex-row;
     }
-    &__img, &__content{
+        &__img{
+            width: 50%;
+            order: 2;
+                @media screen and (max-width:$tablet) {
+                    width: 90%;
+                    order: 1;
+                }
+        }
+     &__content{
         width: 50%;
         @media screen and (max-width:$tablet) {
             width: 90%;

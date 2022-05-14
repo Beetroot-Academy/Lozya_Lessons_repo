@@ -294,11 +294,21 @@ a {
     gap: 50px;
   }
 }
-.hero__img, .hero__content {
+.hero__img {
+  width: 50%;
+  order: 2;
+}
+@media screen and (max-width: 768px) {
+  .hero__img {
+    width: 90%;
+    order: 1;
+  }
+}
+.hero__content {
   width: 50%;
 }
 @media screen and (max-width: 768px) {
-  .hero__img, .hero__content {
+  .hero__content {
     width: 90%;
   }
 }
