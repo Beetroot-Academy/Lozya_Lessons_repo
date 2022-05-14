@@ -15,7 +15,7 @@ img {
 
 .container {
   max-width: 1240px;
-  width: 100%;
+  width: 85%;
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -31,6 +31,7 @@ img {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
 .logo__link {
   display: inline-block;
 }
@@ -278,4 +279,132 @@ img {
   text-align: center;
 }
 
+.our-services {
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 576px) {
+  .our-services {
+    margin-bottom: 50px;
+  }
+}
+.our-services__img {
+  margin-bottom: 120px;
+}
+@media screen and (max-width: 576px) {
+  .our-services__img {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .our-services__container {
+    padding-bottom: 50px;
+  }
+}
+.our-services__subtitle {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 576px) {
+  .our-services__subtitle {
+    margin-bottom: 30px;
+  }
+}
+.our-services__content {
+  display: flex;
+  height: 370px;
+}
+@media screen and (max-width: 767px) {
+  .our-services__content {
+    flex-direction: column;
+    height: auto;
+  }
+}
+.our-services__card {
+  padding: 60px 100px 70px 60px;
+  width: 400px;
+  height: 350px;
+  border: 1px solid #4B4136;
+}
+@media screen and (max-width: 767px) {
+  .our-services__card {
+    width: auto;
+    height: auto;
+  }
+}
+.our-services__card--top {
+  align-self: start;
+}
+.our-services__card--top::before {
+  content: "";
+  width: 45px;
+  height: 60px;
+  display: block;
+  background-image: url(/On-work/Lozya-Repo/HW16/assets/o-s-card1.png);
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 576px) {
+  .our-services__card--top {
+    align-self: center;
+  }
+}
+.our-services__card--middle {
+  align-self: center;
+}
+.our-services__card--middle::before {
+  content: "";
+  width: 50px;
+  height: 60px;
+  display: block;
+  background-image: url(/On-work/Lozya-Repo/HW16/assets/o-s-card2.png);
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 576px) {
+  .our-services__card--middle {
+    align-self: center;
+  }
+}
+.our-services__card--bottom {
+  align-self: end;
+}
+.our-services__card--bottom::before {
+  content: "";
+  width: 45px;
+  height: 60px;
+  display: block;
+  background-image: url(/On-work/Lozya-Repo/HW16/assets/o-s-card3.png);
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 576px) {
+  .our-services__card--bottom {
+    align-self: center;
+  }
+}
+.our-services__card-title {
+  color: #FFAE2B;
+  font-size: 29px;
+  font-size: calc(14px + (29 - 14) * ((100vw - 325px) / (1240 - 325)));
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 325px) {
+  .our-services__card-title {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .our-services__card-title {
+    font-size: 29px;
+  }
+}
+.our-services__card-description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 2.3;
+  color: #ACA592;
+}
 /*# sourceMappingURL=style.css.map */

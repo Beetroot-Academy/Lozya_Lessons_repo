@@ -29,7 +29,7 @@ img {
 
 .container {
     max-width: 1240px;
-    width: 100%;
+    width: 85%;
     padding: 0 20px;
     margin: 0 auto;
 }
@@ -44,12 +44,6 @@ img {
         align-items: center;
         padding-top: 20px;
         padding-bottom: 20px;
-    }
-
-    &__logo {}
-
-    &__nav {
-        // position: relative;
     }
 }
 
@@ -96,8 +90,6 @@ img {
         flex-direction: row;
         gap: 30px;
     }
-
-    &__item {}
 
     &__link {
         text-decoration: none;
@@ -353,3 +345,122 @@ img {
 
     }
 }
+
+// HW of lozya
+.our-services {
+    margin-bottom: 100px;
+    @media screen and (max-width:$mobile) {
+            margin-bottom: 50px;
+        }
+
+    &__img {
+        margin-bottom: 120px;
+        @media screen and (max-width:$mobile){
+            margin-bottom: 60px;
+        }
+    }
+
+
+    &__container {
+        @media screen and (max-width:$mobile){
+            padding-bottom: 50px;
+        }
+    }
+    &__subtitle{
+        margin-bottom: 60px;
+        @media screen and (max-width:$mobile){
+            margin-bottom: 30px;
+        }
+    }
+
+
+    &__content {
+        display: flex;
+        height: 370px;
+        
+        @media screen and (max-width:$tablet) {
+            flex-direction: column;
+            height: auto;
+        }
+
+    }
+
+
+    &__card{
+        padding: 60px 100px 70px 60px;
+        width: 400px;
+        height: 350px;
+        @include border;
+            @media screen and (max-width:$tablet) {
+                width: auto;
+                height: auto;
+            }
+        &--top{
+            align-self: start;
+            &::before{
+                content: '';
+                width: 45px;
+                height: 60px;
+                display: block;
+                background-image: url(/On-work/Lozya-Repo/HW16/assets/o-s-card1.png);
+                background-size: cover;
+                background-position: center;
+                margin-bottom: 20px;
+            }
+            @media screen and (max-width:$mobile){
+                align-self: center;
+            }
+        }
+        &--middle{
+            align-self: center;
+            &::before {
+                    content: '';
+                    width: 50px;
+                    height: 60px;
+                    display: block;
+                    background-image: url(/On-work/Lozya-Repo/HW16/assets/o-s-card2.png);
+                    background-size: cover;
+                    background-position: center;
+                    margin-bottom: 20px;
+                }
+                @media screen and (max-width:$mobile){
+                align-self: center;
+            }
+        }
+
+        &--bottom{
+            align-self: end;
+            &::before {
+                    content: '';
+                    width: 45px;
+                    height: 60px;
+                    display: block;
+                    background-image: url(/On-work/Lozya-Repo/HW16/assets/o-s-card3.png);
+                    background-size: cover;
+                    background-position: center;
+                    margin-bottom: 20px;
+                }
+                @media screen and (max-width:$mobile){
+                align-self: center;
+            }
+        }
+    }
+    &__card-title {
+        color: $orange;
+        @include fluid-font(14px, 29px);
+        margin-bottom: 10px;
+    }
+
+
+    &__card-description {
+        font-style: normal;
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 2.3;        
+            color: #ACA592;
+    }
+}
+
+
+
+
