@@ -1,34 +1,48 @@
+/* SASS mixin start */
+/* SASS mixin end */
 @font-face {
   font-family: "Helvetica";
-  src: url("HelveticaNeueCyr-Roman.woff2") format("woff2"), url("HelveticaNeueCyr-Roman.woff") format("woff");
+  src: url("/On-work/Lozya-Repo/Project_1/fonts/HelveticaNeueCyr-Roman.woff2") format("woff2"), url("/On-work/Lozya-Repo/Project_1/fonts/HelveticaNeueCyr-Roman.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Avenir";
-  src: url("AvenirNextLTPro-Regular.woff2") format("woff2"), url("AvenirNextLTPro-Regular.woff") format("woff");
+  src: url("/On-work/Lozya-Repo/Project_1/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("/On-work/Lozya-Repo/Project_1/fonts/AvenirNextLTPro-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Avenir Bold";
-  src: url("AvenirNextLTPro-Bold.woff2") format("woff2"), url("AvenirNextLTPro-Bold.woff") format("woff");
+  src: url("/On-work/Lozya-Repo/Project_1/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("/On-work/Lozya-Repo/Project_1/fonts/AvenirNextLTPro-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "HelveticaBold";
-  src: url("HelveticaNeueCyr-Bold.woff2") format("woff2"), url("HelveticaNeueCyr-Bold.woff") format("woff");
+  src: url("/On-work/Lozya-Repo/Project_1/fonts/HelveticaNeueCyr-Bold.woff2") format("woff2"), url("/On-work/Lozya-Repo/Project_1/fonts/HelveticaNeueCyr-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 a {
+  display: block;
   text-decoration: none;
-  color: black;
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 160%;
+  color: #4B5D68;
 }
 
 img {
@@ -52,26 +66,424 @@ body {
   height: 60px;
   border-radius: 50px;
   border: none;
+  font-family: "Avenir Bold";
+  font-style: normal;
+  font-size: 18px;
+  line-height: 160%;
+  text-align: center;
+  color: #FFFFFF;
+  letter-spacing: 0.005em;
+  transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 .btn--white {
   text-align: left;
-  padding-left: 30px;
+  padding-left: 20px;
   width: 210px;
   height: 60px;
   background: #FFFFFF;
   box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+  position: relative;
+  color: #212353;
+}
+.btn--white::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 15px;
+  background-image: url(/On-work/Lozya-Repo/Project_1/assets/arrow.png);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  transform: translateY(-50%);
+}
+.btn--white:hover {
+  color: #F063B8;
+  background-color: #ffffffed;
+  box-shadow: 4px -4px 15px 0px #FF1F1F, 12px -11px 7px 0px #FF9376, 20px -5px 7px 0px #FFE264, 20px 6px 7px 0px #F6FF33, 13px 12px 17px 0px #FF9527, 2px 17px 17px 0px #FF0000, -9px 21px 18px 0px #FFF212, -9px 6px 11px 0px #FF0808, -11px -9px 11px 0px #FFFA17, -11px -9px 11px 0px #FFFA17, inset 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 .btn--purple {
   background: #9C69E2;
 }
+.btn--purple:hover {
+  color: #9C69E2;
+  background-color: #f063b892;
+  box-shadow: none;
+}
 .btn--pink {
   background: #F063B8;
 }
+.btn--pink:hover {
+  color: #FFFFFF;
+  background-color: #9b69e2a1;
+  box-shadow: none;
+}
+.btn--pink ~ .btn--white {
+  margin-left: 30px;
+}
+
+.logo__text {
+  font-size: 20px;
+  color: #212353;
+  font-weight: bold;
+}
+
+.title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  font-size: calc(20px + (40 - 20) * ((100vw - 325px) / (1240 - 325)));
+  line-height: 110%;
+  color: #212353;
+}
+@media screen and (max-width: 325px) {
+  .title {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .title {
+    font-size: 40px;
+  }
+}
 
 .container {
-  max-width: 1220px;
+  max-width: 1160px;
   width: 100%;
   padding: 0 20px;
   margin: 0 auto;
+}
+
+.header {
+  padding-top: 50px;
+  margin-bottom: 100px;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px 50px 0px;
+}
+
+.nav {
+  display: flex;
+  gap: 25vw;
+  align-items: center;
+}
+.nav__list {
+  display: flex;
+  gap: 40px;
+}
+.nav__item {
+  padding: 5px 10px;
+}
+.nav__link {
+  transition: all 0.3s ease;
+}
+.nav__item:hover .nav__link {
+  color: #212353;
+  font-weight: bold;
+}
+.nav__title {
+  display: block;
+  font-family: "Avenir Bold";
+  font-weight: 600;
+  font-size: 16px;
+  color: #212353;
+  margin-top: 7px;
+  margin-bottom: 30px;
+}
+
+.hero {
+  margin-bottom: 100px;
+}
+.hero__container {
+  display: flex;
+  padding-bottom: 20px;
+  background-image: url(/On-work/Lozya-Repo/Project_1/assets/hero.png);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.hero__img {
+  display: none;
+}
+.hero__content {
+  max-width: 600px;
+  width: 100%;
+}
+.hero__title {
+  font-size: 80px;
+  font-size: calc(50px + (80 - 50) * ((100vw - 325px) / (1240 - 325)));
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 325px) {
+  .hero__title {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .hero__title {
+    font-size: 80px;
+  }
+}
+.hero__description {
+  width: 80%;
+  margin-bottom: 50px;
+}
+
+.bank {
+  margin-bottom: 150px;
+}
+.bank__card {
+  width: 100%;
+  background-color: rgba(240, 99, 184, 0.15);
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-around;
+  padding-right: 90px;
+  gap: 60px;
+}
+.bank__img {
+  width: 50%;
+}
+.bank__content {
+  padding: 100px 0px;
+  width: 50%;
+}
+.bank__title {
+  line-height: 130%;
+  margin-bottom: 40px;
+}
+
+.features__container {
+  text-align: center;
+}
+.features__title {
+  line-height: 130%;
+  margin-bottom: 50px;
+}
+.features__description {
+  display: inline-block;
+  width: 50%;
+  margin-bottom: 100px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+@media screen and (min-width: 1160px) {
+  .cards {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 50px;
+  }
+}
+
+.card {
+  margin-bottom: 150px;
+  padding-top: 50px;
+  padding-bottom: 33px;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 530px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card--first {
+  background-image: url(/On-work/project-1/img/background-1.png);
+}
+.card--second {
+  background-image: url(/On-work/project-1/img/background-2.png);
+}
+.card--third {
+  background-image: url(/On-work/project-1/img/background-3.png);
+}
+.card--fourth {
+  background-image: url(/On-work/project-1/img/background-4.png);
+}
+.card__arrow {
+  display: inline-block;
+  color: #9C69E2;
+  font-size: 20px;
+  margin-left: 20px;
+  padding-top: 4px;
+  transition: color 0.5s ease-in-out;
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 30px;
+  font-size: 16px;
+}
+.card__title {
+  font-family: "Helvetica";
+  font-size: 24px;
+  font-weight: normal;
+  color: #212353;
+  margin-bottom: 20px;
+}
+.card__description {
+  max-width: 220px;
+  font-size: 16px;
+  text-align: start;
+  margin-bottom: 20px;
+  height: 100%;
+}
+.card__link {
+  display: flex;
+  font-size: 16px;
+  transition: color 0.5s ease-in-out;
+}
+.card__link:hover {
+  color: #2daf2d;
+}
+.card__link:hover .card__arrow {
+  color: #2daf2d;
+}
+
+.testimonials {
+  margin-bottom: 150px;
+}
+.testimonials .container--purple {
+  background-color: #9C69E2;
+  border-radius: 50px;
+  padding: 100px 90px 130px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.testimonials__title {
+  color: #FFFFFF;
+}
+.testimonials__card {
+  background: #FFFFFF;
+  box-shadow: 0px 20px 0px #8b5ec9;
+  border-radius: 20px;
+  max-width: 700px;
+  width: 100%;
+  align-self: center;
+  display: flex;
+  gap: 30px;
+  padding: 60px 70px;
+}
+.testimonials__content {
+  max-width: 340px;
+  width: 100%;
+}
+.testimonials__name {
+  padding-top: 20px;
+  font-weight: bold;
+  letter-spacing: 0.005em;
+  color: #212353;
+  margin-bottom: -5px;
+}
+.testimonials__link {
+  font-size: 14px;
+  color: #9C69E2;
+  margin-bottom: 20px;
+}
+
+.footer {
+  padding-top: 100px;
+  border-top: 2px solid rgba(156, 105, 226, 0.2);
+}
+.footer .footer--top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 90px;
+}
+.footer__title {
+  margin-bottom: 20px;
+}
+.footer .footer--middle {
+  display: flex;
+  gap: 200px;
+  margin-bottom: 100px;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+}
+.footer__logo {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 65px;
+}
+.footer__address {
+  width: 300px;
+  font-size: 16px;
+  color: #212353;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 180%;
+  margin-bottom: 10px;
+}
+.footer__address .address {
+  display: block;
+}
+.footer__nav {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer__link {
+  color: #212353;
+}
+
+.media__list {
+  display: flex;
+  gap: 15px;
+}
+.media__link {
+  position: relative;
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(33, 35, 83, 0.1);
+  transition: background-color 0.3s ease;
+}
+.media__link:hover {
+  background-color: #F063B8;
+}
+.media__link:hover .media__svg {
+  fill: black;
+}
+.media__img {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.media__svg {
+  transition: fill 0.3s ease;
+  fill: #FFFFFF;
+}
+
+.rights {
+  display: block;
+  font-size: 12px;
+  font-weight: 400px;
+  color: #212353;
 }
 /*# sourceMappingURL=style.css.map */

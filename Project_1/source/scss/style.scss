@@ -1,142 +1,379 @@
 @use 'general';
 @use 'variables' as *;
-
-
+@use 'font-mixin' as *;
 .header {
+    padding-top: 50px;
+    margin-bottom: 100px;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 20px 50px 0px;
 
-    &__container {}
-    
-    &__link {}
+    }
+
 }
 
 
 .nav {
+    display: flex;
+    gap: 25vw;
+    align-items: center;
 
-    &__list {}
+    &__list {
+        display: flex;
+        gap: 40px;
+    }
 
-    &__item {}
+    &__item{
+        padding: 5px 10px;
+    }
+    &__link {
+        transition: all 0.3s ease;
+    }
+    &__item:hover &__link {
+        color: $title-color;
+        font-weight: bold;
+    }
 
-    &__link {}
 
-    &__about {}
+    &__title {
+        display: block;
+        font-family: 'Avenir Bold';
+        font-weight: 600;
+        font-size: 16px;
+        color: $title-color;
+        margin-top: 7px;
+        margin-bottom: 30px;
+    }
 
-    &__title {}
-
-    &__help {}
-
-    &__media {}
 }
 
 
 .hero {
+    
+    margin-bottom: 100px;
+    // media tablet bg image none
+    &__container {
+        display: flex;
+        padding-bottom: 20px ;
+        background-image: url(/On-work/Lozya-Repo/Project_1/assets/hero.png);
+        background-size: 60%;
+        background-repeat: no-repeat;
+        background-position: top right;
 
-    &__container {}
+    }
+    &__img{
+        display: none;
+        // media tablet display block
+    }
+    &__content{
+        max-width: 600px;
+        width: 100%;
+    }
 
-    &__title {}
+    &__title {
+        @include fluid-font (50px, 80px);
+        margin-bottom: 50px;
+        
+    }
 
-    &__description {}
+    &__description {
+        width: 80%;
+        margin-bottom: 50px;
+    }
 }
 
 
 .bank {
+    margin-bottom: 150px;
+    
+    &__card{
+        width: 100%;
+            background-color: rgba(240, 99, 184, 0.15);
+            border-radius: 50px;
+            display: flex;
+            justify-content: space-around;
+            padding-right: 90px;
+            gap: 60px;
+    }
 
-    &__container {}
+    &__img {
+        width: 50%;
+    }
 
-    &__img {}
+    &__content {
+        padding: 100px 0px;
+        width: 50%;
+    }
 
-    &__content {}
+    &__title {
+        line-height: 130%;
+        margin-bottom: 40px;
+    }
 
-    &__title {}
-
-    &__description {}
 }
 
 .features {
 
-    &__container {}
+    &__container {
+        text-align: center;
+    }
 
-    &__title {}
+    &__title {
+            line-height: 130%;
+            margin-bottom: 50px;
+    }
 
-    &__description {}
+    &__description {
+        display: inline-block;
+        width: 50%;
+        margin-bottom: 100px;
+    }
 }
 
 
-.cards {}
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    
+        @media screen and (min-width:$desktop) {
+                flex-wrap: wrap;
+                flex-direction: row;
+                align-items: stretch;
+                gap: 50px;
+        }
+    }
 
 .card {
+    margin-bottom: 150px;
+    padding-top: 50px;
+    padding-bottom: 33px;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 530px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    &--first{
+        background-image: url(/On-work/project-1/img/background-1.png);
+    }
+    &--second{
+        background-image: url(/On-work/project-1/img/background-2.png);
+    }
+    &--third{
+        background-image: url(/On-work/project-1/img/background-3.png);   
+    }
+    &--fourth{
+        background-image: url(/On-work/project-1/img/background-4.png);    
+    }
+    &__arrow{
+        display: inline-block;
+        color:$purple;
+        font-size: 20px;
+        margin-left: 20px;
+        padding-top: 4px;
+        transition: color 0.5s ease-in-out;
 
-    &__title {}
+    }
+    &__content{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-right: 30px;
+            font-size: 16px;
+        }
+    &__title {
+        font-family: 'Helvetica';
+        font-size: 24px;
+        font-weight: normal;
+        color: $title-color;
+        margin-bottom: 20px;
+    }
 
-    &__description {}
+    &__description {
+            max-width: 220px;
+                font-size: 16px;
+                text-align: start;
+                margin-bottom: 20px;
+                height: 100%;
+    }
 
-    &__link {}
+    &__link {
+        display: flex;
+        font-size: 16px;
+        transition: color 0.5s ease-in-out;
+        &:hover{
+            color:$green;
+            
+        }
+                &:hover .card__arrow {
+                    color: $green;
+                }
+    }
 }
 
+
 .testimonials {
+    margin-bottom: 150px;
+    .container--purple{
+    background-color: $purple;
+    border-radius: 50px;
+    padding: 100px 90px 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
 
-    &__container {}
+    }
 
-    &__title {}
+    &__title {
+        color: $white;
+    }
 
-    &__card {}
+    &__card {
+        background: #FFFFFF;
+        -webkit-box-shadow: 0px 20px 0px rgba(139 94 201);
+        box-shadow: 0px 20px 0px  rgba(139 94 201);
+        border-radius: 20px;
+        max-width: 700px;
+        width: 100%;
+        align-self: center;
+        display: flex;
+        gap: 30px;
+        padding:60px 70px;
+        
+    }
 
-    &__img {}
 
-    &__content {}
+    &__content {
+        max-width: 340px;
+        width: 100%;
+    }
 
-    &__name {}
+    &__name {
+        padding-top: 20px;
+        font-weight: bold;
+        letter-spacing: 0.005em;
+        color: #212353;
+        margin-bottom: -5px;   
+    }
 
-    &__link {}
+    &__link {
+        font-size: 14px;
+        color: $purple;
+        margin-bottom: 20px;
+    }
 
-    &__comment {}
 }
 
 .footer {
+    padding-top: 100px;
+    border-top: 2px solid $footer-border;
 
-    &__container {}
 
-    &__title {}
+    .footer--top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 90px;
+    }
+    &__title {
+        margin-bottom: 20px;
+    }
 
-    &__description {}
+    .footer--middle {
+        display: flex;
+        gap: 200px;
+        margin-bottom: 100px;
+    }
 
-    &__contacts {}
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &__logo {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        margin-bottom: 65px;
+    }
 
-    &__logo {}
+    &__address {
+        width: 300px;
+        font-size: 16px;
+        color:$title-color;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        line-height: 180%;
+        margin-bottom: 10px;
+        .address{
+            display: block;
+        }
+    }
+    &__nav {
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+    }
 
-    &__adress {}
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 
-    &__nav {}
-
-    &__list {}
-
-    &__link {}
+    &__link {
+        color: $title-color;
+        
+    }
 }
 
-.footer--top {}
-
-.subsection--content {}
-
-.subsection--btn {}
-
-
-
-.footer--middle {}
-
-.about {
-
-    &__item {}
-}
-
-.help {
-
-    &__item {}
-}
 
 .media {
-
-    &__list {}
+    
+    &__list {
+        display: flex;
+        gap: 15px;
+    }
+    
+    &__link{
+        position: relative;
+        border-radius: 100px;
+        width: 50px;
+        height: 50px;
+        background-color:$media-bg-color ;
+        transition: background-color 0.3s ease;
+        &:hover{
+            background-color: $pink;
+        }
+        &:hover .media__svg{
+            fill: black;
+        }
+    }
+    &__img{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__svg{
+        transition: fill 0.3s ease;
+        fill: $white;
+    }
 }
 
-.footer--bottom {}
 
-.rights {}
+.rights {
+    display: block;
+    font-size: 12px;
+    font-weight: 400px;
+    color: $title-color;
+}
