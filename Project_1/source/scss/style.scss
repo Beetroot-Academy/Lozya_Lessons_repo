@@ -1,0 +1,142 @@
+@use 'general';
+@use 'variables' as *;
+
+
+.header {
+
+    &__container {}
+    
+    &__link {}
+}
+
+
+.nav {
+
+    &__list {}
+
+    &__item {}
+
+    &__link {}
+
+    &__about {}
+
+    &__title {}
+
+    &__help {}
+
+    &__media {}
+}
+
+
+.hero {
+
+    &__container {}
+
+    &__title {}
+
+    &__description {}
+}
+
+
+.bank {
+
+    &__container {}
+
+    &__img {}
+
+    &__content {}
+
+    &__title {}
+
+    &__description {}
+}
+
+.features {
+
+    &__container {}
+
+    &__title {}
+
+    &__description {}
+}
+
+
+.cards {}
+
+.card {
+
+    &__title {}
+
+    &__description {}
+
+    &__link {}
+}
+
+.testimonials {
+
+    &__container {}
+
+    &__title {}
+
+    &__card {}
+
+    &__img {}
+
+    &__content {}
+
+    &__name {}
+
+    &__link {}
+
+    &__comment {}
+}
+
+.footer {
+
+    &__container {}
+
+    &__title {}
+
+    &__description {}
+
+    &__contacts {}
+
+    &__logo {}
+
+    &__adress {}
+
+    &__nav {}
+
+    &__list {}
+
+    &__link {}
+}
+
+.footer--top {}
+
+.subsection--content {}
+
+.subsection--btn {}
+
+
+
+.footer--middle {}
+
+.about {
+
+    &__item {}
+}
+
+.help {
+
+    &__item {}
+}
+
+.media {
+
+    &__list {}
+}
+
+.footer--bottom {}
+
+.rights {}
