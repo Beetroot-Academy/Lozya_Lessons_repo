@@ -4,29 +4,43 @@
 .header {
     padding-top: 50px;
     margin-bottom: 100px;
+    position: relative;
     &__container {
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 50px 20px 50px 0px;
-
+        padding: 50px 20px;
     }
-
+    
 }
 
+@media screen and (max-width:$tablet) {
+.header{
+    padding-top: 0px;
+    &__container {
+        padding: 10px 20px;
+    }
+}
+}
 
 .nav {
     display: flex;
-    gap: 25vw;
+    gap: 20vw;
     align-items: center;
 
     &__list {
         display: flex;
-        gap: 40px;
+        gap: 30px;
     }
 
     &__item{
-        padding: 5px 10px;
+        padding: 5px;
+        @media screen and (max-width:$mobile) {
+            width: 100%;
+            text-align: center;
+            padding: 5px;
+        }
     }
     &__link {
         transition: all 0.3s ease;
@@ -48,6 +62,81 @@
     }
 
 }
+.burger {
+    display: none;
+    height: 40px;
+    // display: flex;
+    flex-direction: column;
+
+    .bar {
+        display: block;
+        width: 30px;
+        height: 4px;
+        margin: 5px auto;
+        background-color: #AAAAAB;
+        transition: transform 0.3s linear, opacity 0.3s linear, background-color 0.3s linear;
+    }
+
+    &.active .bar:nth-child(1) {
+        transform: translateY(12px) rotate(45deg);
+        background-color: $purple;
+    }
+
+    &.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    &.active .bar:nth-child(3) {
+        transform: translateY(-15px) rotate(-45deg);
+        background-color: $purple;
+    }
+
+    &.active {
+        display: flex;
+    }
+}
+
+@media screen and (max-width:$tablet) {
+    .burger {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .nav__list {
+        padding: 20px 0;
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        width: 100%;
+        opacity: 0;
+        background: #9c69e294;
+
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.3s ease-in-out;
+        @media screen and (max-width:$mobile){
+            flex-direction: column;
+            gap: 40px;
+            padding: 110px 0;
+            background-color: $purple;
+            
+        }
+
+        &.active {
+            display: flex;
+
+            opacity: 1;
+
+        }
+    }
+
+    .nav__link {
+        color: #FFFFFF;
+        font-size: 25px;
+        font-weight: bold;
+    }
+}
 
 
 .hero {
@@ -61,15 +150,27 @@
         background-size: 60%;
         background-repeat: no-repeat;
         background-position: top right;
-
-    }
+        @media screen and (max-width:$tablet){
+            flex-direction: column;
+            background-image: none;
+        } 
+    }  
     &__img{
         display: none;
-        // media tablet display block
+        @media screen and (max-width:$tablet) {
+        
+                display: block;
+            }    
     }
     &__content{
         max-width: 600px;
         width: 100%;
+        @media screen and (max-width:$tablet) {
+                max-width: none;
+                width: 100%;
+                text-align: center;
+            }
+
     }
 
     &__title {
@@ -81,13 +182,14 @@
     &__description {
         width: 80%;
         margin-bottom: 50px;
-    }
+        @media screen and (max-width:$tablet) {  
+            width: 100%;
+          }
+}
 }
 
-
 .bank {
-    margin-bottom: 150px;
-    
+    margin-bottom: 150px;    
     &__card{
         width: 100%;
             background-color: rgba(240, 99, 184, 0.15);
@@ -113,7 +215,27 @@
     }
 
 }
-
+        @media screen and (max-width:$tablet) {
+            .bank {
+                    margin-bottom: 50px;           
+                    &__card {
+                        align-items: center;
+                        flex-direction: column;
+                        padding: 30px 30px;
+                        gap: 20px;
+                        text-align: center;
+                    }
+            
+                    &__img {
+                        width: 100%;
+                    }
+            
+                    &__content {
+                        padding: 0px 0px;
+                        width: 100%;
+                    }
+                }
+        }
 .features {
 
     &__container {
@@ -150,7 +272,7 @@
 .card {
     margin-bottom: 150px;
     padding-top: 50px;
-    padding-bottom: 33px;
+    padding-bottom: 40px;
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: contain;
@@ -160,18 +282,20 @@
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
+    @media screen and (max-width:$tablet){
+        margin-bottom: 50px;
+    }
+
+
     &--first{
-        background-image: url(/On-work/project-1/img/background-1.png);
+        background-image: url(/On-work/Lozya-Repo/Project_1/assets/background-1.png);
     }
     &--second{
-        background-image: url(/On-work/project-1/img/background-2.png);
-    }
+        background-image: url(/On-work/Lozya-Repo/Project_1/assets/background-2.png);    }
     &--third{
-        background-image: url(/On-work/project-1/img/background-3.png);   
-    }
+        background-image: url(/On-work/Lozya-Repo/Project_1/assets/background-3.png);    }
     &--fourth{
-        background-image: url(/On-work/project-1/img/background-4.png);    
-    }
+        background-image: url(/On-work/Lozya-Repo/Project_1/assets/background-4.png);    }
     &__arrow{
         display: inline-block;
         color:$purple;
@@ -217,10 +341,39 @@
                 }
     }
 }
+@media screen and (max-width:$mobile) {
+    .card {
+        flex-direction: column;
+            text-align: center;
+            padding: 0px;
+            &--first {
+                background-image: none;
+            }
+    
+            &--second {
+                background-image: none;
+            }
+    
+            &--third {
+                background-image: none;
+            }
+    
+            &--fourth {
+                background-image: none;
+            }
+            &__content{
+                align-items: center;
+                text-align: center;
+            }
+        }
+}
 
 
 .testimonials {
     margin-bottom: 150px;
+        @media screen and (max-width:$tablet) {
+            margin-bottom: 30px;
+        }
     .container--purple{
     background-color: $purple;
     border-radius: 50px;
@@ -228,7 +381,10 @@
     display: flex;
     flex-direction: column;
     gap: 80px;
-
+    @media screen and (max-width:$tablet){
+        margin-bottom: 75px;
+        padding: 50px 45px 65px;
+    }
     }
 
     &__title {
@@ -246,6 +402,12 @@
         display: flex;
         gap: 30px;
         padding:60px 70px;
+        @media screen and (max-width:$tablet){
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 10px 10px;
+        }
         
     }
 
@@ -281,6 +443,7 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 90px;
+        @include footer-flex;
     }
     &__title {
         margin-bottom: 20px;
@@ -290,11 +453,18 @@
         display: flex;
         gap: 200px;
         margin-bottom: 100px;
+        @include footer-flex;
+                @media screen and (max-width:$tablet) {
+                    gap: 30px;
+                }
     }
 
     &__contacts {
         display: flex;
         flex-direction: column;
+        @media screen and (max-width:$tablet){
+            align-items: center;
+        }
     }
     
     &__logo {
@@ -320,6 +490,12 @@
         display: flex;
         width: 50%;
         justify-content: space-between;
+        @media  screen and (max-width:$tablet)  {
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            
+        }
     }
 
     &__list {
@@ -333,13 +509,44 @@
         
     }
 }
+.nav {
 
+    &__about {
+        order: 1;
+    }
+    &__help {
+        order: 2;
+    }
+    &__media {
+        order: 3;
+        padding-bottom: 20px;
+    }
+}
+@media  screen and (max-width:$tablet)  {
+.nav {
 
+        &__about {
+            order: 2;
+        }
+
+        &__help {
+            order: 3;
+        }
+
+        &__media {
+            width: 100%;
+            order: 1;
+        }
+    }
+}
 .media {
     
     &__list {
         display: flex;
         gap: 15px;
+        @media screen and (max-width:$tablet) {
+            justify-content: center;
+        }
     }
     
     &__link{

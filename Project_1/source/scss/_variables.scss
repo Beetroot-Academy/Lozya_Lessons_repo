@@ -11,5 +11,15 @@ $footer-border:
 
 // width
 $tablet: 820px;
-$mobile: 320px;
+$mobile: 443px;
 $desktop: 1160px;
+@mixin footer-flex {
+    display: flex;
+    flex-direction: row;
+    @media screen and (max-width:$tablet) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
