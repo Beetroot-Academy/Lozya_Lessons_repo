@@ -294,7 +294,7 @@ body {
 .hero__container {
   display: flex;
   padding-bottom: 20px;
-  background-image: url(/On-work/Lozya-Repo/Project_1/assets/hero.png);
+  background-image: url(../assets/hero.png);
   background-size: 60%;
   background-repeat: no-repeat;
   background-position: top right;
@@ -440,16 +440,16 @@ body {
   }
 }
 .card--first {
-  background-image: url(/On-work/Lozya-Repo/Project_1/assets/background-1.png);
+  background-image: url(../assets/background-1.png);
 }
 .card--second {
-  background-image: url(/On-work/Lozya-Repo/Project_1/assets/background-2.png);
+  background-image: url(../assets/background-2.png);
 }
 .card--third {
-  background-image: url(/On-work/Lozya-Repo/Project_1/assets/background-3.png);
+  background-image: url(../assets/background-3.png);
 }
 .card--fourth {
-  background-image: url(/On-work/Lozya-Repo/Project_1/assets/background-4.png);
+  background-image: url(../assets/background-4.png);
 }
 .card__arrow {
   display: inline-block;

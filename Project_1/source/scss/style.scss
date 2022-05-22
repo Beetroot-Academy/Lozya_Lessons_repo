@@ -142,11 +142,10 @@
 .hero {
     
     margin-bottom: 100px;
-    // media tablet bg image none
     &__container {
         display: flex;
         padding-bottom: 20px ;
-        background-image: url(/On-work/Lozya-Repo/Project_1/assets/hero.png);
+        background-image: url(../assets/hero.png);
         background-size: 60%;
         background-repeat: no-repeat;
         background-position: top right;
@@ -288,14 +287,14 @@
 
 
     &--first{
-        background-image: url(/On-work/Lozya-Repo/Project_1/assets/background-1.png);
+        background-image: url(../assets/background-1.png);
     }
     &--second{
-        background-image: url(/On-work/Lozya-Repo/Project_1/assets/background-2.png);    }
+        background-image: url(../assets/background-2.png);    }
     &--third{
-        background-image: url(/On-work/Lozya-Repo/Project_1/assets/background-3.png);    }
+        background-image: url(../assets/background-3.png);    }
     &--fourth{
-        background-image: url(/On-work/Lozya-Repo/Project_1/assets/background-4.png);    }
+        background-image: url(../assets/background-4.png);    }
     &__arrow{
         display: inline-block;
         color:$purple;
