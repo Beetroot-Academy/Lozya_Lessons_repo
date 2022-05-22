@@ -12,6 +12,11 @@
         align-items: center;
         padding: 50px 20px;
     }
+    &__btn{
+            @media screen and (max-width:$mobile) {
+                    display: none;
+                }
+    }
     
 }
 
@@ -506,6 +511,15 @@
     &__link {
         color: $title-color;
         
+    }
+}
+.subsection--btn{
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width:$mobile) {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 15px;
     }
 }
 .nav {

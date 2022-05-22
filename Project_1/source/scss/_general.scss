@@ -2,8 +2,8 @@
 @use 'font-mixin' as *;
 @font-face {
     font-family: 'Helvetica';
-    src: url('/On-work/Lozya-Repo/Project_1/fonts/HelveticaNeueCyr-Roman.woff2') format('woff2'),
-        url('/On-work/Lozya-Repo/Project_1/fonts/HelveticaNeueCyr-Roman.woff') format('woff');
+    src: url('../fonts/HelveticaNeueCyr-Roman.woff2') format('woff2'),
+        url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -11,8 +11,8 @@
 
 @font-face {
     font-family: 'Avenir';
-    src: url('/On-work/Lozya-Repo/Project_1/fonts/AvenirNextLTPro-Regular.woff2') format('woff2'),
-        url('/On-work/Lozya-Repo/Project_1/fonts/AvenirNextLTPro-Regular.woff') format('woff');
+    src: url('../fonts/AvenirNextLTPro-Regular.woff2') format('woff2'),
+        url('../fonts/AvenirNextLTPro-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -20,8 +20,8 @@
 
 @font-face {
     font-family: 'Avenir Bold';
-    src: url('/On-work/Lozya-Repo/Project_1/fonts/AvenirNextLTPro-Bold.woff2') format('woff2'),
-        url('/On-work/Lozya-Repo/Project_1/fonts/AvenirNextLTPro-Bold.woff') format('woff');
+    src: url('../fonts/AvenirNextLTPro-Bold.woff2') format('woff2'),
+        url('../fonts/AvenirNextLTPro-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -29,8 +29,8 @@
 
 @font-face {
     font-family: 'HelveticaBold';
-    src: url('/On-work/Lozya-Repo/Project_1/fonts/HelveticaNeueCyr-Bold.woff2') format('woff2'),
-        url('/On-work/Lozya-Repo/Project_1/fonts/HelveticaNeueCyr-Bold.woff') format('woff');
+    src: url('../fonts/HelveticaNeueCyr-Bold.woff2') format('woff2'),
+        url('../fonts/HelveticaNeueCyr-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -103,7 +103,7 @@ body {
             display: block;
             width: 25px;
             height: 15px;
-            background-image: url(/On-work/Lozya-Repo/Project_1/assets/arrow.png);
+            background-image: url(../assets/arrow.png);
             background-size: cover;
             background-position: center;
             position: absolute;
@@ -141,9 +141,6 @@ body {
                 background-color: #9b69e2a1;
                 box-shadow: none;
             }
-    }
-        &--pink~&--white{
-        margin-left: 30px;
     }
 }
 
