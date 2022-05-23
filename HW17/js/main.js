@@ -13,16 +13,17 @@ alert("Привіт, " + userName + ".");
 let userYear = prompt("Який у Вас рік народження?");
 const serverYear = 2022;
 let userAge = serverYear - userYear;
-alert("Ваш вік " + userAge + ".");
+alert("Ваш вік: " + userAge + ".");
 // Вирахування периметру квадрата
-let squareSize = prompt("Яка довжина сторони квадрата?");
+let squareSize = prompt("Яка довжина сторони квадрата у сантиметрах?");
 let squarePerim = squareSize * 4;
-alert("Периметр квадрату: " + squarePerim);
+alert("Периметр квадрату: " + squarePerim + " см.");
 //  вирахування площі кола
-let radius = prompt("Яка довжина радіуса кола?");
+let radius = prompt("Яка довжина радіуса кола у сантиметрах?");
 let pi = 3.14;
-let area = radius * '2' * pi;
-alert("Площа кола ≈" + area + ".");
+let doubleRadius = radius * radius;
+let area = doubleRadius * pi;
+alert("Площа кола ≈" + area + " см.");
 //  Вирахування швидкості
 let distance = prompt("Яка відстань між двома містами у кілометрах?");
 let time = prompt("За який час Ви бажаєте дістатися до другого міста в годинах?");
