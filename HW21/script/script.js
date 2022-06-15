@@ -2,11 +2,11 @@
 
 class Product {
     constructor(name, ammount, price) {
-        this.name = name,
-            this.ammount = ammount,
-            this.price = price,
-            this.summ = price * ammount,
-            this.isBuy = false;
+        this.name = name;
+        this.ammount = ammount;
+        this.price = price;
+        this.summ = price * ammount;
+        this.isBuy = false;
     }
 }
 
@@ -21,7 +21,7 @@ let shoppingList = [tomato, cucumber, feta, mango]
 
 function alertShopList(arr) {
     function byField(field) {
-        return (a) => a[field] === true ? -1 : 1;
+        return (a) => a[field] ? -1 : 1;
     }
 
     arr.sort(byField(`isBuy`))
@@ -51,7 +51,7 @@ function buy(arr, product) {
 //Min 1.3
 
 function alertNotBuyProds(arr) {
-    let notBuyList = arr.filter((obj) => obj.isBuy === false)
+    let notBuyList = arr.filter((obj) => !obj.isBuy)
     console.log(`   The not Buy List`);
     notBuyList.map((obj) => {
         return console.log(`
@@ -79,7 +79,7 @@ function deleteFromList(arr, product) {
 function addToList(arr, product, ammount, price) {
     let search = arr.filter((obj) => obj.name == product)
     let newProduct;
-    if (search.length === 0) {
+    if (!search.length) {
         newProduct = new Product(`${product}`, ammount, price)
         arr.push(newProduct)
         return arr
