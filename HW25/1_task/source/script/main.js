@@ -34,15 +34,15 @@ let playList = [
 ];
 
 function AddPlayList(list) {
-    const newElement = document.createElement("ul");
+    const newElement = document.createElement("ol");
     newElement.classList.add(`playlist`);
     let search = document.querySelector(`.hero__section`);
     search.append(newElement);
     for (let i = 0; i < list.length; i++) {
         let newLi = document.createElement(`li`);
         newLi.classList.add(`playlist__item`);
-        newLi.innerHTML = `<span class="playlist__author">${list[i].author}</span> - <span class="playlist__song">${list[i].song.toLowerCase()}</span>`;
-        search = document.querySelector(`ul`);
+        newLi.innerHTML = `${i+1}. <span class="playlist__author">${list[i].author}</span> - <span class="playlist__song">${list[i].song.toLowerCase()}</span>`;
+        search = document.querySelector(`ol`);
         search.append(newLi);
     }
 }

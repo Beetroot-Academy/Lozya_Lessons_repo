@@ -11,14 +11,21 @@
 .playlist {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: baseline;
   gap: 10px;
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .playlist__item {
   display: inline-block;
   padding: 5px;
   border-bottom: 2px solid yellow;
   text-transform: capitalize;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .playlist__author {
   color: rgba(55, 161, 161, 0.829);
