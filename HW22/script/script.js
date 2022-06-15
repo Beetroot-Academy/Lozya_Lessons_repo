@@ -26,7 +26,7 @@ function showInfo(vehicle) {
 }
 //Min 1.2
 
-function driverAdding(vehicle, driver) {
+function addDriver(vehicle, driver) {
     return vehicle.driver = driver
 }
 
@@ -74,7 +74,7 @@ let time = {
 
 
 //Norm 1.1
-function addingZero(value) {
+function addZero(value) {
     if (value < 10) {
         return "0" + value
     } else {
