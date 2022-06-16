@@ -74,7 +74,7 @@ main {
 }
 .modal__title {
   background: -webkit-linear-gradient(rgba(198, 22, 201, 0.744), #3428e8);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
