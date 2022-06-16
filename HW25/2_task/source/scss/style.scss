@@ -1,3 +1,88 @@
-        h1 {
-            height: auto;
-        }
+img {
+    max-width: 100%;
+    border-radius: 20px;
+}
+main {
+    height: 70vh;
+}
+
+.title {
+    font-size: 27px;
+    font-weight: bold;
+    font-family: "Courier New", Courier, monospace;
+}
+.header {
+    &__title {
+        text-align: center;
+        padding: 40px;
+        color: red;
+    }
+}
+.btn {
+    box-sizing: border-box;
+    background-color: rgba(132, 0, 255, 0.541);
+    border: 2px transparent solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: larger;
+    color: wheat;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        border: 2px gray solid;
+        background-color: pink;
+        color: black;
+    }
+    &--open {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.348);
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
+    &__container {
+        width: 80%;
+        height: 70%;
+        padding: 15px 10px;
+        background-color: white;
+        border-radius: 20px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 2;
+    }
+
+    &__btn {
+        align-self: flex-start;
+    }
+    &__title {
+        background: -webkit-linear-gradient(
+            rgba(198, 22, 201, 0.744),
+            rgb(52, 40, 232)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+.active {
+    display: block;
+}
+.img__container {
+    width: 45%;
+}
