@@ -1,0 +1,18 @@
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.text__container {
+  padding: 50px;
+  border: 2px solid;
+  border-radius: 100px;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+  font-family: "Courier New", Courier, monospace;
+  color: antiquewhite;
+  font-size: 20px;
+}
+/*# sourceMappingURL=style.css.map */
