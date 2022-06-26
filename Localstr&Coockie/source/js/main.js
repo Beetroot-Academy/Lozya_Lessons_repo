@@ -24,3 +24,30 @@ async function logIn(event) {
     window.location.href = "user.html";
   }
 }
+
+//task_2
+
+let textarea = document.querySelector('#area');
+let textareaValue;
+
+textarea.addEventListener('change', function() {
+textareaValue = textarea.value;
+localStorage.setItem('areavalue', textareaValue);
+// console.log('Hi')
+})
+
+//task_3
+
+let button = document.querySelector('.light__theme');
+let body = document.querySelector('body');
+
+button.addEventListener('click', function(){
+body.classList.toggle('dark__theme')
+let bodyClass = body.className;
+localStorage.setItem('theme', bodyClass);
+
+})
+document.addEventListener('DOMContentLoaded', function() {
+    let bodyClass = localStorage.getItem('theme');
+    body.classList.add(`${bodyClass}`);
+})
