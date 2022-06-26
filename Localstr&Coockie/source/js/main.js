@@ -6,17 +6,21 @@ let accessToken;
 form.addEventListener(`submit`, logIn);
 
 async function logIn(event) {
-    event.preventDefault();
-    const emailValue = document.querySelector(`#email`).value;
-    const passValue = document.querySelector(`#password`).value;
-    let data = await fetch(API, {
-        headers: { "Content-Type": "application/json" },
-        method: `post`,
-        body: JSON.stringify({
-            email: emailValue,
-            password: passValue,
-        }),
-    });
+  event.preventDefault();
+  const emailValue = document.querySelector(`#email`).value;
+  const passValue = document.querySelector(`#password`).value;
+  let data = await fetch(API, {
+    headers: { "Content-Type": "application/json" },
+    method: `post`,
+    body: JSON.stringify({
+      email: emailValue,
+      password: passValue,
+    }),
+  });
+  if (data.status == 200) {
     let json = await data.json();
-    accessToken = json.data.accessToken
+    accessToken = json.data.accessToken;
+    document.cookie = `Authorization=${accessToken}`;
+    window.location.href = "user.html";
+  }
 }
