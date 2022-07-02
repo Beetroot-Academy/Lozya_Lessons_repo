@@ -1,0 +1,86 @@
+@use "variables" as *;
+
+.gallery {
+    &__img {
+        display: block;
+        max-width: 285px;
+        width: 100%;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+
+        &::after {
+            content: url(../img/Gallery/Magnifier.svg);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+            &::after {
+                opacity: 1;
+                visibility: visible;
+                transform: translate(-50%, -50%);
+            }
+            img {
+                transform: scale(2);
+            }
+        }
+
+        img {
+            width: 100%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        &--first {
+            max-width: 580px;
+        }
+    }
+    &__photos {
+        margin-bottom: 40px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    &--small {
+        display: flex;
+        max-width: 580px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    &__btn {
+        margin-bottom: 150px;
+    }
+    &__title {
+        font-size: 44px;
+        line-height: 54px;
+        color: $blue_color;
+        text-align: center;
+        margin-bottom: 100px;
+        position: relative;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100px;
+            border: 1px solid $blue_color;
+            top: -30px;
+            right: 50%;
+            transform: translateX(50%);
+        }
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}

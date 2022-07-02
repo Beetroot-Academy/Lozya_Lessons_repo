@@ -1,21 +1,60 @@
-$headers: "Montserrat", sans-serif;
-$main_text: "Open Sans", sans-serif;
-$header_links: "Source Sans Pro", sans-serif;
-$blue_color: #2c4058;
-$white: #ffffff;
-$black: #000000;
-$purple: #7e5aff;
+@use "variables" as *;
 body {
     font-family: $main_text;
+}
 
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 img {
     max-width: 100%;
 }
 
 #map {
-    height: 400px;
-    /* The height is 400 pixels */
+    height: 700px;
     width: 100%;
-    /* The width is the width of the web page */
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+.button {
+    display: inline-block;
+    padding: 16px 40px;
+    border: 1px solid $blue_color;
+    background-color: transparent;
+    font-family: $headers;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    &:hover {
+        background-color: $purple;
+        color: $white;
+        border: 1px solid transparent;
+        border-radius: 25px;
+    }
+}
+.title {
+    font-family: $headers;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-family: $headers;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.wrapper {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
 }

@@ -1,20 +1,37 @@
-document.addEventListener("DOMContentLoaded", function () {
-    let splide = new Splide("#slider1", {
-        autoplay: true,
-        interval: 1000,
-        paginationDirection: "ttb",
-        arrows: false,
-        type: "loop",
-        cover: true,
-        fixedHeight: `100vh`,
-        pauseOnHover: false,
-        pauseOnActive: false,
-    });
-    let splide2 = new Splide("#slider2", {});
-    splide.mount();
-    splide2.mount();
+// Splide API
+let splide = new Splide("#hero__slider", {
+    autoplay: true,
+    interval: 2500,
+    paginationDirection: "ttb",
+    direction: "ltr",
+    arrows: false,
+    type: "loop",
+    cover: true,
+    fixedHeight: `100vh`,
+    pauseOnHover: false,
+    classes: {
+        pagination: "splide__pagination pagination",
+        page: "splide__pagination__page pagination__dots",
+    },
 });
+let splide2 = new Splide("#slider2", {
+    type: "loop",
+    autoplay: true,
+    interval: 3000,
+    perPage: 3,
+    perMove: 1,
+    height: `700px`,
+    gap: "30px",
+    pauseOnHover: false,
+    classes: {
+        pagination: "splide__pagination pagination news__pagination",
+        page: "splide__pagination__page pagination__dots",
+    },
+});
+splide.mount();
+splide2.mount();
 
+//GMaps maps
 const displayMap = document.getElementById("map");
 
 function initMap(newLat, newLng) {
@@ -55,3 +72,5 @@ function initMap(newLat, newLng) {
 }
 
 window.initMap = initMap(50.458309842219066, 30.46494879270167);
+
+//
