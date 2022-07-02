@@ -1,0 +1,21 @@
+$headers: "Montserrat", sans-serif;
+$main_text: "Open Sans", sans-serif;
+$header_links: "Source Sans Pro", sans-serif;
+$blue_color: #2c4058;
+$white: #ffffff;
+$black: #000000;
+$purple: #7e5aff;
+body {
+    font-family: $main_text;
+
+}
+img {
+    max-width: 100%;
+}
+
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}

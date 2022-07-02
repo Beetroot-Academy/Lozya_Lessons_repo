@@ -1,0 +1,192 @@
+@use "base";
+
+.nav__link {
+    text-transform: capitalize;
+}
+
+.logo {
+}
+
+#picker {
+    width: 320px;
+}
+
+.logo__img {
+    fill: none;
+    width: 40px;
+    height: 40px;
+}
+.logo__img:hover {
+    fill: none;
+    stroke: red;
+}
+
+.header {
+    background: linear-gradient(243.43deg, #7e5aff 16.9%, #55b7ff 83.27%);
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+        align-items: center;
+        position: absolute;
+        top: 30px;
+        z-index: 2;
+    }
+}
+.wrapper {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+}
+.logo {
+    &__img {
+    }
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 110px;
+    align-items: center;
+    &__list {
+        display: flex;
+        gap: 100px;
+    }
+
+    &__item {
+    }
+
+    &__link {
+    }
+}
+.social {
+    display: flex;
+    gap: 20px;
+    &__img {
+    }
+}
+.splide {
+    &__track {
+    }
+
+    &__list {
+    }
+
+    &__slide {
+    }
+}
+.hero {
+    &__img {
+        opacity: 0;
+    }
+}
+.projects {
+    &__title {
+    }
+
+    &__wrapper {
+    }
+
+    &__container {
+    }
+
+    &__article {
+    }
+
+    &__text {
+    }
+
+    &__img {
+    }
+
+    &__subtitle {
+    }
+}
+.title {
+}
+.subtitle {
+}
+.container {
+    &__subtitle {
+    }
+
+    &__title {
+    }
+}
+.button {
+}
+.location {
+    &__dot {
+    }
+
+    &__text {
+    }
+}
+.fa-solid {
+}
+.fa-location-dot {
+}
+.news {
+    &__container {
+    }
+
+    &__img {
+    }
+
+    &__title {
+    }
+
+    &__text {
+    }
+}
+.redactor {
+    &__pic {
+    }
+
+    &__name {
+    }
+
+    &__date {
+    }
+}
+.gallery {
+    &__img {
+    }
+}
+.wrappergallery {
+    &__wrapper {
+    }
+}
+.titlesection {
+    &__title {
+    }
+}
+.btn {
+}
+.footer {
+}
+.map {
+}
+.contacts {
+    &__details {
+    }
+
+    &__ico {
+    }
+
+    &__form {
+    }
+}
+.section {
+    &__title {
+    }
+}
+.details {
+    &__text {
+    }
+}
+.fa-phone {
+}
+.fa-inbox {
+}
+.fa-clock {
+}

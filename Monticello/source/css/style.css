@@ -1,0 +1,71 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+
+.nav__link {
+  text-transform: capitalize;
+}
+
+#picker {
+  width: 320px;
+}
+
+.logo__img {
+  fill: none;
+  width: 40px;
+  height: 40px;
+}
+
+.logo__img:hover {
+  fill: none;
+  stroke: red;
+}
+
+.header {
+  background: linear-gradient(243.43deg, #7e5aff 16.9%, #55b7ff 83.27%);
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  align-items: center;
+  position: absolute;
+  top: 30px;
+  z-index: 2;
+}
+
+.wrapper {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 110px;
+  align-items: center;
+}
+.nav__list {
+  display: flex;
+  gap: 100px;
+}
+.social {
+  display: flex;
+  gap: 20px;
+}
+.hero__img {
+  opacity: 0;
+}
+/*# sourceMappingURL=style.css.map */
