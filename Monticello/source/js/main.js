@@ -73,4 +73,59 @@ function initMap(newLat, newLng) {
 
 window.initMap = initMap(50.458309842219066, 30.46494879270167);
 
-//
+// Form submit
+const API = `https://awesome-wallet-app.herokuapp.com/auth/login`;
+const form = document.querySelector(`.contacts__form`);
+
+form.addEventListener(`submit`, sendForm);
+
+async function sendForm(event) {
+    event.preventDefault();
+    const emailValue = document.querySelector(`#email`).value;
+    const fullnameValue = document.querySelector(`#fullname`).value;
+    let data = await fetch(API, {
+        headers: { "Content-Type": "application/json" },
+        method: `post`,
+        body: JSON.stringify({
+            email: emailValue,
+            fullName: fullnameValue,
+        }),
+    });
+    if (data.status == 400) {
+        alert(`Сталась помилка, перевsрте данні`);
+    }
+}
+
+// modal for gallery
+let chooseElement;
+let galleryImg = document.querySelectorAll(`.gallery__img`);
+let body = document.querySelector(`body`);
+let imgNum;
+let splide3;
+galleryImg.forEach((e) => {
+    e.addEventListener(`click`, openModal);
+    function openModal() {
+        imgNum = Number(e.id);
+        chooseElement = document.querySelector(`.modal`);
+        chooseElement.classList.toggle(`active`);
+        body.style.overflow = `hidden`;
+
+        splide3 = new Splide(`#splide__modal`, {
+            type: "loop",
+            perPage: 1,
+            start: imgNum,
+            perMove: 1,
+            fixedHeight: `60vh`,
+            width: `60vh`,
+            cover: true,
+        });
+        splide3.mount();
+    }
+});
+
+function closeModal() {
+    chooseElement = document.querySelector(`.modal`);
+    chooseElement.classList.toggle(`active`);
+    body.style.overflow = `visible`;
+    splide3.destroy();
+}

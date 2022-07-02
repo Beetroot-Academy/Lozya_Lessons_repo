@@ -58,3 +58,39 @@ a {
     width: 100%;
     margin: 0 auto;
 }
+
+#splide__modal {
+    z-index: 12;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(100, 12, 158, 0.363);
+    z-index: 10;
+    &__container {
+        width: 80%;
+        height: 75%;
+        padding: 15px 10px;
+        background-color: white;
+        border-radius: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 11;
+    }
+    &__btn {
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+.active {
+    display: block;
+}

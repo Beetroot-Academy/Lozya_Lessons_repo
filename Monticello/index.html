@@ -40,9 +40,9 @@
         <header class="header">
             <div class="wrapper header__wrapper">
                 <div class="header__container">
-                    <div class="logo">
+                    <a href="#" class="logo">
                         <img src="./source/img/Logo.svg" alt="Logo" />
-                    </div>
+                    </a>
                     <nav class="nav">
                         <ul class="nav__list">
                             <li class="nav__item">
@@ -461,32 +461,32 @@
                 <div class="wrapper gallery__wrapper">
                     <h2 class="title gallery__title">Gallery</h2>
                     <div class="photos gallery__photos">
-                        <div class="gallery__img gallery__img--first">
+                        <div class="gallery__img gallery__img--first" id="0">
                             <img
                                 src="./source/img/Gallery/main-pic.png"
                                 alt="gallery example"
                             />
                         </div>
-                        <div class="gallary gallery--small">
-                            <div class="gallery__img">
+                        <div class="gallary gallery--small" >
+                            <div class="gallery__img" id="1">
                                 <img
                                     src="./source/img/Gallery/pic2.png"
                                     alt="gallery example"
                                 />
                             </div>
-                            <div class="gallery__img">
+                            <div class="gallery__img" id="2">
                                 <img
                                     src="./source/img/Gallery/pic3.png"
                                     alt="gallery example"
                                 />
                             </div>
-                            <div class="gallery__img">
+                            <div class="gallery__img" id="3">
                                 <img
                                     src="./source/img/Gallery/pic4.png"
                                     alt="gallery example"
                                 />
                             </div>
-                            <div class="gallery__img">
+                            <div class="gallery__img" id="4">
                                 <img
                                     src="./source/img/Gallery/pic5.png"
                                     alt="gallery example"
@@ -495,6 +495,45 @@
                         </div>
                     </div>
                     <button class="button gallery__btn">See more</button>
+                    <div class="modal">
+                        <div class="modal__container">
+                            <div class="splide" id="splide__modal" role="group" aria-label="Splide Basic HTML Example">
+                                <div class="splide__track">
+                                      <ul class="splide__list">
+                                          <li class="splide__slide">
+                                            <img
+                                            src="./source/img/Gallery/main-pic.png"
+                                            alt="1"
+                                            />
+                                          </li>
+                                          <li class="splide__slide">
+                                            <img
+                                            src="./source/img/Gallery/pic2.png"
+                                            alt="2"
+                                            />
+                                          </li>
+                                          <li class="splide__slide"><img
+                                            src="./source/img/Gallery/pic3.png"
+                                            alt="3"
+                                            />
+                                           </li>
+                                           <li class="splide__slide"><img
+                                            src="./source/img/Gallery/pic4.png"
+                                            alt="4"
+                                            />
+                                           </li>
+                                           <li class="splide__slide"><img
+                                            src="./source/img/Gallery/pic5.png"
+                                            alt="5"
+                                            />
+                                           </li>
+                                           
+                                      </ul>
+                                </div>
+                              </div>
+                            <button class="button modal__btn" onclick="closeModal()">Close</button>
+                        </div>
+                    </div>
                 </div>
             </section>
             <div id="map" class="map">
@@ -532,12 +571,12 @@
                 </div>
             </div>
             <nav class="footer__nav">
-                <div class="logo">
+                <a href="#" class="logo">
                     <img src="./source/img/Logo.svg" alt="Logo" />
                     <span class="logo__text">
                         Copyrights © 2020 Montichello
                     </span>
-                </div>
+                </a>
                 <div class="social">
                     <div class="social__container">
                         <a href="https://www.instagram.com" class="social__link">
