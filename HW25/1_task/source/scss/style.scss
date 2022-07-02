@@ -1,0 +1,33 @@
+.header {
+    padding: 50px 0;
+}
+.title {
+    text-align: center;
+    font-size: larger;
+    color: blue;
+}
+
+.playlist {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 10px;
+    margin: 0 auto;
+    width: fit-content;
+
+    &__item {
+        display: inline-block;
+        padding: 5px;
+        border-bottom: 2px solid yellow;
+        text-transform: capitalize;
+        width: fit-content;
+    }
+    &__author {
+        color: rgba(55, 161, 161, 0.829);
+        font-weight: 700;
+    }
+    &__song {
+        font-weight: 600;
+        color: red;
+    }
+}
