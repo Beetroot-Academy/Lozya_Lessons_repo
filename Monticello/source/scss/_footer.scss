@@ -18,11 +18,11 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%, -60%);
+    padding: 60px;
     &--flex {
         display: flex;
         justify-content: space-between;
-        gap: 50px;
-        padding: 0px 60px 60px 60px;
+        gap: 40px;
     }
     &__details {
         display: flex;
@@ -75,6 +75,13 @@
     line-height: 27px;
     color: $black;
     padding-bottom: 15px;
+    transition: all 0.3s ease;
+}
+#fullname:focus {
+    opacity: 1;
+}
+#email:focus {
+    opacity: 1;
 }
 #fullname:not(:placeholder-shown) {
     opacity: 1;

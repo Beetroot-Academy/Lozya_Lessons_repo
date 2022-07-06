@@ -4,6 +4,7 @@ let splide = new Splide("#hero__slider", {
     interval: 2500,
     paginationDirection: "ttb",
     direction: "ltr",
+    drag: false,
     arrows: false,
     type: "loop",
     cover: true,
@@ -105,7 +106,9 @@ let splide3;
 galleryImg.forEach((e) => {
     e.addEventListener(`click`, openModal);
     function openModal() {
-        imgNum = Number(e.id);
+        picId = e.id;
+        let imgNum = picId.split("_").pop();
+        imgNum.join;
         chooseElement = document.querySelector(`.modal`);
         chooseElement.classList.toggle(`active`);
         body.style.overflow = `hidden`;
