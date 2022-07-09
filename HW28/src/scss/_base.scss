@@ -1,0 +1,23 @@
+@use "variables" as *;
+.btn {
+    padding: 15px 55px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #000000;
+    background-color: transparent;
+    &:hover {
+        color: $brown-light;
+        background-color: $tomato-light;
+    }
+    &--white {
+        color: #fff;
+        border: 2px solid #f8f1ea;
+    }
+    &--black {
+        color: #000000;
+
+        border: 2px solid #000000;
+    }
+}
