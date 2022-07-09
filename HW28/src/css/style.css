@@ -19,4 +19,12 @@
   color: #000000;
   border: 2px solid #000000;
 }
+
+.profile__ico {
+  fill: white;
+  stroke: black;
+}
+.profile__ico:hover {
+  stroke: #f16a50;
+}
 /*# sourceMappingURL=style.css.map */

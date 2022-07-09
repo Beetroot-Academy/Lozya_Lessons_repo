@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css"
+        />
+        <link rel="stylesheet" href="./src/css/reset_style.css" />
+        <link rel="stylesheet" href="./src/css/style.css" />
+        <title>OnWave</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="wrapper header__wrapper">
+                <div class="logo">
+                    <img src="./src/img/logos/Orange_logo.svg" alt="Logo" />
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">Home</li>
+                        <li class="nav__item">Catalog</li>
+                        <li class="nav__item">News</li>
+                        <li class="nav__item">Contacts</li>
+                    </ul>
+                </nav>
+                <div class="profile">
+                    <div class="search">
+                        <svg class="serach__ico">
+                            <use xlink:href="./src/img/svg/icons.svg#search"></use>
+                        </svg>
+                    </div>
+                    <div class="profile__button">
+                        <svg class="profile__ico"> 
+                            <use xlink:href="./src/img/svg/icons.svg#profile"></use>
+                        </svg>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main></main>
+        <footer class="footer"></footer>
+    </body>
 </html>
