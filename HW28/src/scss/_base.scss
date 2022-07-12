@@ -1,4 +1,20 @@
 @use "variables" as *;
+* {
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+}
+a {
+    color: #000000;
+    text-decoration: none;
+}
+main {
+    margin-top: 80px;
+}
 .btn {
     padding: 15px 55px;
     font-weight: 500;
@@ -19,5 +35,38 @@
         color: #000000;
 
         border: 2px solid #000000;
+    }
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+@media screen and (min-width: $tablet) {
+    .wrapper {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}
+
+@media screen and (min-width: $desktop) {
+    .wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.ico {
+    max-width: 36px;
+    max-height: 36px;
+    width: 100%;
+    fill: transparent;
+    stroke: black;
+    cursor: pointer;
+    &:hover {
+        stroke: $tomato-light;
     }
 }
