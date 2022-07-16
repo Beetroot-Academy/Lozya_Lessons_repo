@@ -1,0 +1,126 @@
+@use "variables" as *;
+@use "font-mixin" as *;
+
+.footer {
+    background-color: $brown-dark;
+
+    &__wrapper {
+        padding: 70px 30px 20px;
+    }
+    &--flex {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 65px;
+    }
+    &__logo {
+        margin-bottom: 35px;
+        width: 150px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__link {
+        @include menu;
+        color: #fff;
+        transition: color 0.3s ease-in-out;
+        &:hover {
+            color: $tomato-light;
+        }
+    }
+
+    &__title {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 32px;
+        color: #fff;
+        margin-bottom: 50px;
+    }
+    &__phone {
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 32px;
+    }
+}
+.contact-us {
+    &__social {
+        display: flex;
+        gap: 35px;
+        margin-bottom: 35px;
+    }
+
+    &__ico {
+        & > .fill--white {
+            fill: #fff;
+        }
+        &:hover > .fill--white {
+            fill: $tomato-light;
+        }
+        stroke: #fff;
+    }
+}
+
+.copyrights {
+    display: block;
+    text-align: center;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #fff;
+}
+@media screen and (max-width: $tablet) {
+    .contact-us {
+        &__social {
+            gap: 20px;
+        }
+
+        &__ico {
+            width: fit-content;
+        }
+    }
+    .footer {
+        &__wrapper {
+            padding: 70px 15px 20px;
+        }
+    }
+}
+@media screen and (max-width: $mobile) {
+    .footer {
+        &__wrapper {
+            padding: 35px 5px 20px;
+        }
+        &--flex {
+            gap: 10px;
+        }
+        &__title {
+            margin-bottom: 0px;
+        }
+    }
+    .contact-us {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+        &__social {
+            gap: 10px;
+            margin-bottom: 0px;
+        }
+
+        &__ico {
+            & > .fill--white {
+                fill: #fff;
+            }
+            &:hover > .fill--white {
+                fill: $tomato-light;
+            }
+            stroke: #fff;
+        }
+    }
+}

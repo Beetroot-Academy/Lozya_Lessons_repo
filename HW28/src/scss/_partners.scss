@@ -1,0 +1,24 @@
+@use "variables" as *;
+@use "font-mixin" as *;
+
+.partners {
+    background-color: $brown-light;
+    padding-bottom: 70px;
+    &__heading {
+        padding: 70px 0px 100px;
+    }
+
+    &__slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .partners {
+        &__heading {
+            padding: 35px 0px 35px;
+        }
+    }
+}

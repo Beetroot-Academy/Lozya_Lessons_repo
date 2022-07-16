@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="stylesheet" href="./src/css/reset_style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/combine/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css,npm/@splidejs/splide@4.0.7/dist/css/splide-core.min.css"
+        />
+
+        <link rel="stylesheet" href="./src/css/style.css" />
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"
+        ></script>
+        <script defer src="./src/js/main.js"></script>
+        <title>OnWave</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="wrapper header__wrapper">
+                <div class="logo">
+                    <a href="#"
+                        ><img src="./src/img/logos/Orange_logo.svg" alt="Logo"
+                    /></a>
+                </div>
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="#" class="header__link">Home</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">Catalog</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">News</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="profile">
+                    <div class="search__button">
+                        <svg class="ico search__ico">
+                            <use
+                                xlink:href="./src/img/svg/icons.svg#search"
+                            ></use>
+                        </svg>
+                    </div>
+                    <div class="ico profile__button">
+                        <svg class="ico profile__ico">
+                            <use
+                                xlink:href="./src/img/svg/icons.svg#profile"
+                            ></use>
+                        </svg>
+                    </div>
+                    <div class="menu icons__menu">
+                        <span class="menu__bar menu__bar--top"></span>
+                        <span class="menu__bar menu__bar--mid"></span>
+                        <span class="menu__bar menu__bar--bot"></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section
+                class="splide hero"
+                id="hero"
+                aria-label="Splide Basic HTML Example"
+            >
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide hero__slide">
+                            <div class="wrapper hero__wrapper">
+                                <div class="hero__content ">
+                                    <h1 class="title hero__title">
+                                        Discover new options
+                                    </h1>
+                                    <button class="btn hero__btn btn--white">
+                                        View more
+                                    </button>
+                                </div>
+                            </div>
+                            <img src="./src/img/pic1.png" alt="" />
+                        </li>
+                        <li class="splide__slide hero__slide">
+                            <div class="wrapper hero__wrapper">
+                                <div class="hero__content">
+                                    <h1 class="title hero__title">
+                                        expand your horizons
+                                    </h1>
+                                    <button class="btn hero__btn btn--white">
+                                        View more
+                                    </button>
+                                </div>
+                            </div>
+                            <img src="./src/img/pic2.png" alt="" />
+                        </li>
+                        <li class="splide__slide hero__slide">
+                            <div class="wrapper hero__wrapper">
+                                <div class="hero__content">
+                                    <h1 class="title hero__title">
+                                        Find your own style
+                                    </h1>
+                                    <button class="btn hero__btn btn--white">
+                                        View more
+                                    </button>
+                                </div>
+                            </div>
+                            <img src="./src/img/pic3.png" alt="" />
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="arrivals">
+                    <div
+                        class="splide"
+                        id="arrivals__slider"
+                        aria-labelledby="carousel-heading"
+                    >
+                        <h2 class="section__header arrivals__heading">
+                            New Arrivals
+                        </h2>
+                        <div class="splide__arrows">
+                            <button class="splide__arrow splide__arrow--prev">
+                                <svg class="arrows">
+                                    <use
+                                        xlink:href="./src/img/svg/icons.svg#arrow"
+                                    ></use>
+                                </svg>
+                            </button>
+                            <button class="splide__arrow splide__arrow--next">
+                                <svg class="arrows">
+                                    <use
+                                        xlink:href="./src/img/svg/icons.svg#arrow"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="splide__track non-hero-track">
+                            <ul class="splide__list">
+                                <li class="splide__slide arrivals__slide">
+                                    <a href="#" class="arrivals__container">
+                                        <span class="sold__status">in stock</span>
+                                        <div class="arrivals__guitar">
+                                            <img
+                                                src="./src/img/guitar/guitar1.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <p class="arrivals__description">
+                                            Hagstrom Alvar Limited Edition
+                                        </p>
+                                        <span class="arrivals__price"
+                                            >€2.990,00</span
+                                        >
+                                    </a>
+                                </li>
+                                <li class="splide__slide arrivals__slide">
+                                    <a href="#" class="arrivals__container">
+                                        <span class="sold__status">in stock</span>
+                                        <div class="arrivals__guitar">
+                                            <img
+                                                src="./src/img/guitar/guitar2.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <p class="arrivals__description">
+                                            Hagstrom Tremar Viking Deluxe Cloudy
+                                            Seas
+                                        </p>
+                                        <span class="arrivals__price"
+                                            >€1.300,00</span
+                                        >
+                                    </a>
+                                </li>
+                                <li class="splide__slide arrivals__slide">
+                                    <a
+                                        href="#"
+                                        class="arrivals__container arrivals--active"
+                                    >
+                                        <span class="sold__status sold">Sold</span>
+                                        <div class="arrivals__guitar">
+                                            <img
+                                                src="./src/img/guitar/guitar3.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <p class="arrivals__description">
+                                            Gibson Les Paul Standard 60s
+                                        </p>
+                                        <span class="arrivals__price"
+                                            >€3.749,00</span
+                                        >
+                                    </a>
+                                </li>
+                                <li class="splide__slide arrivals__slide">
+                                    <a href="#" class="arrivals__container">
+                                        <span class="sold__status">in stock</span>
+                                        <div class="arrivals__guitar">
+                                            <img
+                                                src="./src/img/guitar/guitar4.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <p class="arrivals__description">
+                                            Suhr Standard Plus Trans Blue Denim
+                                        </p>
+                                        <span class="arrivals__price"
+                                            >€3.449,00</span
+                                        >
+                                    </a>
+                                </li>
+                                <li class="splide__slide arrivals__slide">
+                                    <a href="#" class="arrivals__container">
+                                        <span class="sold__status">in stock</span>
+                                        <div class="arrivals__guitar">
+                                            <img
+                                                src="./src/img/guitar/guitar5.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <p class="arrivals__description">
+                                            Fender Telecaster Black Paisley Limited
+                                            Edition
+                                        </p>
+                                        <span class="arrivals__price"
+                                            >€1.499,00</span
+                                        >
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="btn btn--black arrivals__btn">View more</button>
+            </section>
+            <section class="partners">
+                <h2 class="section__header partners__heading">Our partners</h2>
+                <div
+                    class="splide"
+                    id="partners__slider"
+                    aria-labelledby="carousel-heading"
+                >
+                    <div class="splide__arrows">
+                        <button class="splide__arrow splide__arrow--prev">
+                            <svg class="arrows">
+                                <use
+                                    xlink:href="./src/img/svg/icons.svg#arrow"
+                                ></use>
+                            </svg>
+                        </button>
+                        <button class="splide__arrow splide__arrow--next">
+                            <svg class="arrows">
+                                <use
+                                    xlink:href="./src/img/svg/icons.svg#arrow"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="splide__track non-hero-track">
+                        <ul class="splide__list">
+                            <li class="splide__slide partners__slide">
+                                <img src="./src/img/logos/item.svg" alt="" />
+                            </li>
+                            <li class="splide__slide partners__slide">
+                                <img src="./src/img/logos/esp.svg" alt="" />
+                            </li>
+                            <li class="splide__slide partners__slide">
+                                <img src="./src/img/logos/Group.svg" alt="" />
+                            </li>
+                            <li class="splide__slide partners__slide">
+                                <img src="./src/img/logos/engl.svg" alt="" />
+                            </li>
+                            <li class="splide__slide partners__slide">
+                                <img src="./src/img/logos/roland.svg" alt="" />
+                            </li>
+                            <li class="splide__slide partners__slide">
+                                <img src="./src/img/logos/fender.svg" alt="" />
+                            </li>
+                            <li class="splide__slide partners__slide">
+                                <img src="./src/img/logos/peavey.svg" alt="" />
+                            </li>
+                            <li class="splide__slide partners__slide">
+                                <img src="./src/img/logos/marshal.svg" alt="" />
+                            </li>
+                            <li class="splide__slide partners__slide">
+                                <img src="./src/img/logos/orange.svg" alt="" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="wrapper footer__wrapper">
+               <div class="footer--flex">
+                    <div class="navigation">
+                        <div class="logo footer__logo">
+                            <img src="./src/img/logos/White_logo.svg" alt="Logo" />
+                        </div>
+                        <nav class="footer__nav">
+                            <ul class="footer__list">
+                                <li class="footer__item">
+                                    <a href="#" class="footer__link">Home</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__link">Catalog</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__link">News</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="#" class="footer__link">Contacts</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="contact-us">
+                        <h2 class="footer__title">Contact Us</h2>
+                        <ul class="contact-us__social">
+                            <li class="contact-us__item">
+                                <svg class="ico contact-us__ico">
+                                    <use class="fill--white"
+                                        xlink:href="./src/img/svg/icons.svg#igramm"
+                                    ></use>
+                                </svg>
+                            </li>
+                            <li class="contact-us__item">
+                                <svg class="ico contact-us__ico">
+                                    <use class="fill--white"
+                                        xlink:href="./src/img/svg/icons.svg#fb"
+                                    ></use>
+                                </svg>
+                            </li>
+                            <li class="contact-us__item">
+                                <svg class="ico contact-us__ico">
+                                    <use class="fill--white"
+                                        xlink:href="./src/img/svg/icons.svg#pint"
+                                    ></use>
+                                </svg>
+                            </li>
+                            <li class="contact-us__item">
+                                <svg class="ico contact-us__ico">
+                                    <use
+                                        xlink:href="./src/img/svg/icons.svg#twitter"
+                                    ></use>
+                                </svg>
+                            </li>
+                            <li class="contact-us__item">
+                                <svg class="ico contact-us__ico">
+                                    <use 
+                                        xlink:href="./src/img/svg/icons.svg#yt"
+                                    ></use>
+                                </svg>
+                            </li>
+                        </ul>
+                        <a href="tel:0800 300 4040" class="footer__link footer__phone"
+                            >0800 300 4040</a
+                        >
+                    </div>
+               </div>
+                <span class="copyrights"
+                    >&#xA9 Copyright 2022. All rights reserved.</span
+                >
+            </div>
+        </footer>
+    </body>
+</html>

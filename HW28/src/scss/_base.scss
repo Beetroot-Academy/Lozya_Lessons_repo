@@ -1,0 +1,145 @@
+@use "variables" as *;
+@use "font-mixin" as *;
+
+* {
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+}
+a {
+    color: #000000;
+    text-decoration: none;
+}
+main {
+    margin-top: 80px;
+}
+.btn {
+    padding: 15px 55px;
+    @include btn--status;
+    color: #000000;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        color: $brown-light;
+        background-color: $tomato-light;
+        border: 2px solid $tomato-light;
+    }
+    &--white {
+        color: #fff;
+        border: 2px solid $brown-light;
+    }
+    &--black {
+        color: #000000;
+
+        border: 2px solid #000000;
+    }
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ico {
+    max-width: 36px;
+    max-height: 36px;
+    width: 100%;
+    fill: transparent;
+    stroke: black;
+    cursor: pointer;
+    &:hover {
+        stroke: $tomato-light;
+    }
+}
+
+.arrows {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        fill: $tomato-light;
+    }
+}
+.splide__arrow svg {
+    opacity: 1;
+
+    width: 40px;
+    height: 70px;
+}
+.splide {
+    &__arrow {
+        opacity: 1;
+        width: 40px;
+        height: 70px;
+        background: transparent;
+    }
+
+    &__arrow--prev {
+        left: 2em;
+    }
+
+    &__arrow--next {
+        right: 2em;
+    }
+}
+.non-hero-track {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.section__header {
+    @include heading2;
+    text-align: center;
+    color: #000;
+}
+@media screen and (max-width: $desktop) {
+    .wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .wrapper {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+    .splide {
+        margin: 0 auto;
+        &__arrow {
+            width: 16px;
+            height: 30px;
+        }
+
+        &__arrow--prev {
+            left: -1.5em;
+        }
+
+        &__arrow--next {
+            right: -1.5em;
+        }
+    }
+    .ico {
+        width: 27px;
+        height: 27px;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .splide__pagination__page {
+        width: 12px;
+        height: 12px;
+    }
+    .non-hero-track {
+        padding-bottom: 40px;
+    }
+}

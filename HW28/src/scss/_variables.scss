@@ -1,0 +1,60 @@
+@use "font-mixin" as *;
+
+$brown-dark: #35312d;
+$arrow_inactive: #202020;
+$tomato: #c62100;
+$tomato-light: #f16a50;
+$brown-light: #f8f1ea;
+$dot-inactive: rgba(248, 241, 234, 0.7);
+$dark-dot-inactive: #cac2ba;
+
+@mixin heading1 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    @include fluid-font(26px, 50px);
+    line-height: 61px;
+    text-transform: uppercase;
+}
+@mixin heading2 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    @include fluid-font(20px, 32px);
+    line-height: 39px;
+    text-transform: uppercase;
+}
+@mixin prod {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+@mixin price {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+}
+@mixin btn--status {
+    font-weight: 500;
+    font-size: 18px;
+    @include fluid-font(16px, 18px);
+    line-height: 22px;
+    text-transform: uppercase;
+}
+@mixin menu {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    @include fluid-font(16px, 20px);
+    line-height: 24px;
+}
+
+$desktop: 1320px;
+$tablet: 768px;
+$mobile: 430px;
