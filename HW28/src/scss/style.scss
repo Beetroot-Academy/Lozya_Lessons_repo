@@ -131,13 +131,14 @@
     .nav {
         display: flex;
         position: absolute;
-        top: 100%;
+        top: 0%;
         left: 0%;
         width: 100%;
         opacity: 0;
         justify-content: center;
         gap: 40px;
-        transition: all 0.3s ease-in-out;
+        z-index: -1;
+        transition: all 0.3s ease-in-out, opacity 100ms ease-in-out;
         background-color: tomato;
         &__link {
             font-weight: 500;
@@ -164,5 +165,6 @@
         display: flex;
         opacity: 1;
         z-index: 4;
+        top: 100%;
     }
 }
