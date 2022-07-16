@@ -1,0 +1,14 @@
+@use "variables" as *;
+.partners {
+    background-color: $brown-light;
+    padding-bottom: 70px;
+    &__heading {
+        padding: 70px 0px 100px;
+    }
+
+    &__slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

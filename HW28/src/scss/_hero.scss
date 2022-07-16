@@ -1,0 +1,33 @@
+@use "variables" as *;
+
+.hero {
+    margin-bottom: 70px;
+    &__pagination--page {
+        height: 20px;
+        opacity: 1;
+        width: 20px;
+        background: $dot-inactive;
+        margin-left: 30px;
+    }
+    &__title {
+        @include heading1;
+        color: $brown-light;
+        width: 400px;
+        text-align: center;
+    }
+    &__wrapper {
+        margin-top: calc(60px + 15vh);
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+}
+.splide__pagination__page.is-active {
+    transform: scale(1);
+    background: $tomato-light;
+}

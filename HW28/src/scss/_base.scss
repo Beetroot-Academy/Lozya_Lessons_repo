@@ -17,19 +17,18 @@ main {
 }
 .btn {
     padding: 15px 55px;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
-    text-transform: uppercase;
+    @include btn--status;
     color: #000000;
     background-color: transparent;
+    transition: all 0.3s ease-in-out;
     &:hover {
         color: $brown-light;
         background-color: $tomato-light;
+        border: 2px solid $tomato-light;
     }
     &--white {
         color: #fff;
-        border: 2px solid #f8f1ea;
+        border: 2px solid $brown-light;
     }
     &--black {
         color: #000000;
@@ -69,4 +68,47 @@ main {
     &:hover {
         stroke: $tomato-light;
     }
+}
+
+.arrows {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        fill: $tomato-light;
+    }
+}
+.splide__arrow svg {
+    opacity: 1;
+
+    width: 40px;
+    height: 70px;
+}
+.splide {
+    &__arrow {
+        opacity: 1;
+        width: 40px;
+        height: 70px;
+        background: transparent;
+    }
+
+    &__arrow--prev {
+        left: 2em;
+    }
+
+    &__arrow--next {
+        right: 2em;
+    }
+}
+.non-hero-track {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.section__header {
+    @include heading2;
+    text-align: center;
+    color: #000;
 }

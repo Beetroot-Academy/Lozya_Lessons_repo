@@ -1,0 +1,53 @@
+@use "variables" as *;
+.arrivals {
+    text-align: center;
+    &__price {
+        @include price;
+    }
+
+    &__heading {
+        margin-bottom: 50px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 440px;
+        border: 1px solid $brown-light;
+        transition: border 0.3s ease-in-out;
+    }
+
+    &__guitar {
+        width: fit-content;
+        & > img {
+            max-width: 100%;
+        }
+    }
+    &__description {
+        text-align: center;
+        @include prod;
+        width: 210px;
+    }
+    &__slide.is-active > .arrivals__container {
+        border: 1px solid $tomato-light;
+    }
+}
+#arrivals__slider {
+    margin-bottom: 50px;
+}
+.sold__status {
+    background-color: $tomato-light;
+    padding: 4px 15px;
+    align-self: flex-start;
+    @include btn--status;
+}
+.sold {
+    background-color: $brown-light;
+}
+
+.arrivals__btn {
+    display: inline;
+    margin-bottom: 70px;
+}
