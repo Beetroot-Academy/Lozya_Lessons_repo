@@ -1,4 +1,6 @@
 @use "variables" as *;
+@use "font-mixin" as *;
+
 * {
     box-sizing: border-box;
 }
@@ -43,19 +45,6 @@ main {
     margin: 0 auto;
     padding-left: 10px;
     padding-right: 10px;
-}
-@media screen and (min-width: $tablet) {
-    .wrapper {
-        padding-left: 14px;
-        padding-right: 14px;
-    }
-}
-
-@media screen and (min-width: $desktop) {
-    .wrapper {
-        padding-left: 0;
-        padding-right: 0;
-    }
 }
 
 .ico {
@@ -111,4 +100,46 @@ main {
     @include heading2;
     text-align: center;
     color: #000;
+}
+@media screen and (max-width: $desktop) {
+    .wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .wrapper {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+    .splide {
+        margin: 0 auto;
+        &__arrow {
+            width: 16px;
+            height: 30px;
+        }
+
+        &__arrow--prev {
+            left: -1.5em;
+        }
+
+        &__arrow--next {
+            right: -1.5em;
+        }
+    }
+    .ico {
+        width: 27px;
+        height: 27px;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .splide__pagination__page {
+        width: 12px;
+        height: 12px;
+    }
+    .non-hero-track {
+        padding-bottom: 40px;
+    }
 }

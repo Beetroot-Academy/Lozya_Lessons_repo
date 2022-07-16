@@ -1,4 +1,6 @@
 @use "variables" as *;
+@use "font-mixin" as *;
+
 .arrivals {
     text-align: center;
     &__price {
@@ -50,4 +52,19 @@
 .arrivals__btn {
     display: inline;
     margin-bottom: 70px;
+}
+
+@media screen and (max-width: $tablet) {
+    .arrivals {
+        &__btn {
+            margin-bottom: 30px;
+        }
+        &__description {
+            width: unset;
+        }
+    }
+
+    #arrivals__slider {
+        margin-bottom: 25px;
+    }
 }

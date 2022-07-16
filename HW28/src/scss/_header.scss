@@ -1,4 +1,6 @@
 @use "variables" as *;
+@use "font-mixin" as *;
+
 .search__ico {
     fill: black;
     &:hover {
@@ -28,9 +30,7 @@
     &__link {
         transition: all 0.3s ease;
         padding: 29px 15px;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 24px;
+        @include menu;
         &:hover {
             box-sizing: border-box;
             background-color: $tomato-light;
@@ -47,11 +47,6 @@
     display: flex;
     gap: 30px;
     align-items: center;
-    &__button {
-    }
-
-    &__ico {
-    }
 }
 
 .menu {
@@ -109,11 +104,15 @@
             font-weight: 500;
             font-size: 16px;
             line-height: 20px;
+            padding: 29px 10px;
         }
     }
 }
 
-@media screen and (max-width: $mobile) {
+@media screen and (max-width: 620px) {
+    .header__wrapper {
+        height: 60px;
+    }
     .header__nav {
         display: flex;
         position: absolute;
@@ -125,13 +124,14 @@
         gap: 40px;
         z-index: -1;
         transition: all 0.3s ease-in-out, opacity 0.3s ease-in-out;
-        background-color: tomato;
+        background-color: $tomato-light;
     }
 
     .header__link {
         font-weight: 500;
         font-size: 16px;
         line-height: 20px;
+        padding: 29px 6vw;
     }
     .ico {
         width: 25px;
@@ -152,5 +152,15 @@
         opacity: 1;
         z-index: 4;
         right: 0%;
+    }
+}
+@media screen and (max-width: 320px) {
+    .header {
+        &__nav {
+            gap: 10px;
+        }
+        &__link {
+            padding: 31px 11px;
+        }
     }
 }

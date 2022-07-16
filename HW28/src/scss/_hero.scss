@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "font-mixin" as *;
 
 .hero {
     margin-bottom: 70px;
@@ -30,4 +31,19 @@
 .splide__pagination__page.is-active {
     transform: scale(1);
     background: $tomato-light;
+}
+
+@media screen and (max-width: $tablet) {
+    .hero__pagination--page {
+        height: 12px;
+        width: 12px;
+    }
+}
+@media screen and (max-width: $mobile) {
+    .hero__title {
+        width: 200px;
+    }
+    .hero__slide {
+        background-position-x: 25% !important;
+    }
 }
