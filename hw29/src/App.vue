@@ -35,7 +35,8 @@
         <v-col>
           <v-slider
             v-model="borderValue"
-            :label="borderSettings.label"
+            :value="borderValue"
+            label="Border"
             :min="borderSettings.min"
             :max="borderSettings.max"
             thumb-label
@@ -67,6 +68,7 @@
               <v-subheader class="subtitle">Blur:</v-subheader>
               <v-slider
                 v-model="blurValue"
+                :value="blurValue"
                 :min="blurSettings.min"
                 :max="blurSettings.max"
                 thumb-label
@@ -90,6 +92,7 @@
               <v-subheader class="subtitle">Contrast:</v-subheader>
               <v-slider
                 v-model="contrastValue"
+                :value="contrastValue"
                 :min="contrastSettings.min"
                 :max="contrastSettings.max"
                 thumb-label
@@ -113,6 +116,7 @@
               <v-subheader class="subtitle">Hue Rotate:</v-subheader>
               <v-slider
                 v-model="hueRotateValue"
+                :value="hueRotateValue"
                 :min="hueRotateSettings.min"
                 :max="hueRotateSettings.max"
                 thumb-label
@@ -136,6 +140,7 @@
               <v-subheader class="subtitle">Sepia:</v-subheader>
               <v-slider
                 v-model="sepiaValue"
+                :value="sepiaValue"
                 :min="sepiaSettings.min"
                 :max="sepiaSettings.max"
                 thumb-label
@@ -159,6 +164,7 @@
               <v-subheader class="subtitle">Saturate:</v-subheader>
               <v-slider
                 v-model="saturateValue"
+                :value="saturateValue"
                 :min="saturateSettings.min"
                 :max="saturateSettings.max"
                 thumb-label
@@ -179,7 +185,7 @@
           </v-row>
           <v-row>
             <v-col>
-              <v-btn color="primary" elevation="2" @click="clearValue">
+              <v-btn color="primary" outlined elevation="2" @click="clearValue">
                 Clear all
               </v-btn>
             </v-col>
@@ -215,14 +221,14 @@ export default {
       saturateValue: 100,
     };
   },
-  method: {
+  methods: {
     clearValue() {
-      this.border = `10px`;
-      this.blur = `0px`;
-      this.contrast = `100%`;
-      this.hueRotate = `0deg`;
-      this.sepia = `0%`;
-      this.saturate = `100%`;
+      this.borderValue = 10;
+      this.blurValue = 0;
+      this.contrastValue = 100;
+      this.hueRotateValue = 0;
+      this.sepiaValue = 0;
+      this.saturateValue = 100;
     },
   },
   computed: {},
