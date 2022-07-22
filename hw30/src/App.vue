@@ -36,11 +36,29 @@
                   v-model="task.value"
                   size="lg"
                 >
-                  <span class="task__name">{{ task.name }}</span>
+                  <b-form-input
+                    class="task__name"
+                    v-model="task.name"
+                    :plaintext="!task.isEdit"
+                  ></b-form-input>
+                  <b-button
+                    :id="index"
+                    v-if="task.isEdit"
+                    variant="outline-primary"
+                    @click="taskEdit(index)"
+                    >Save</b-button
+                  >
+                  <b-button
+                    :id="index"
+                    v-if="!task.isEdit"
+                    variant="outline-primary"
+                    @click="taskEdit(index)"
+                    >Edit</b-button
+                  >
                   <b-button
                     :id="index"
                     variant="outline-primary"
-                    @click="taskDelete"
+                    @click="taskDelete(index)"
                     >Delete</b-button
                   >
                 </b-form-checkbox>
@@ -63,11 +81,30 @@
                   v-model="task.value"
                   size="lg"
                 >
-                  <span class="task__name">{{ task.name }}</span>
+                  <b-form-input
+                    class="task__name"
+                    v-model="task.name"
+                    :plaintext="!task.isEdit"
+                    @click="taskEdit(index)"
+                  ></b-form-input>
+                  <b-button
+                    :id="index"
+                    v-if="task.isEdit"
+                    variant="outline-primary"
+                    @click="taskEdit(index)"
+                    >Save</b-button
+                  >
+                  <b-button
+                    :id="index"
+                    v-if="!task.isEdit"
+                    variant="outline-primary"
+                    @click="taskEdit(index)"
+                    >Edit</b-button
+                  >
                   <b-button
                     :id="index"
                     variant="outline-primary"
-                    @click="taskDelete"
+                    @click="taskDelete(index)"
                     >Delete</b-button
                   >
                 </b-form-checkbox>
@@ -88,9 +125,10 @@ export default {
       tasks: {
         name: ``,
         value: false,
+        isEdit: false,
       },
       todoList: [],
-      input: document.querySelector(`.task`),
+      empty: ``,
     };
   },
   methods: {
@@ -106,13 +144,15 @@ export default {
       return this.tasks.name;
     },
 
-    taskDelete(event) {
-      let eventEl = event.target;
-      let liTask = eventEl.closest(`li`);
-      liTask.remove();
-      this.unCompleted.splice(eventEl.id, 1);
-
-      return this.todoList;
+    taskDelete(index) {
+      this.todoList.splice(index, 1);
+    },
+    taskEdit(index) {
+      if (this.todoList[index].isEdit === false) {
+        this.todoList[index].isEdit = true;
+      } else {
+        this.todoList[index].isEdit = false;
+      }
     },
   },
   created() {
@@ -121,10 +161,12 @@ export default {
     this.todoList = existing;
   },
   watch: {
-    todoList(newVal) {
-      localStorage.setItem("todo-list", JSON.stringify(newVal));
+    todoList: {
+      handler: function (newVal) {
+        localStorage.setItem("todo-list", JSON.stringify(newVal));
+      },
+      deep: true,
     },
-    deep: true,
   },
 };
 </script>
@@ -168,6 +210,7 @@ export default {
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  gap: 15px;
   width: 100%;
   text-align: left;
   align-items: center;
