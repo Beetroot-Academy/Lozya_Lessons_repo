@@ -1,0 +1,68 @@
+@use "variables" as *;
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Ubuntu Mono", monospace;
+  color: #c7d5e2;
+  background-color: #3d3c3c;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+.wrapper {
+  max-width: 1300px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.button {
+  display: inline-block;
+  padding: 20px 20px;
+  border-radius: 6px;
+
+  &--primary {
+    border: 2px solid transparent;
+    font-family: "Press Start 2P", cursive;
+    font-size: 20px;
+    animation: animateBtn 4s ease infinite alternate;
+    text-transform: uppercase;
+  }
+  &--secondary {
+    background-color: $red;
+    font-size: 20px;
+    border: 2px solid $green;
+    color: white;
+  }
+}
+.title {
+  font-size: 40px;
+  line-height: 1.5;
+  color: $red;
+}
+.subtitle {
+  font-size: 18px;
+  color: white;
+}
+
+@keyframes animateBtn {
+  0% {
+    border: 2px solid $red;
+    color: $yellow;
+  }
+  50% {
+    border: 2px solid $blue;
+    color: $green;
+  }
+  75% {
+    border: 2px solid $green;
+    color: $blue;
+  }
+  100% {
+    border: 2px solid $yellow;
+    color: $red;
+  }
+}
