@@ -15,5 +15,7 @@ export default {
 <style lang="scss" scoped>
 .bigwrap {
   background-image: url("../assets/bg.png");
+  background-size: cover;
+  background-attachment: fixed;
 }
 </style>

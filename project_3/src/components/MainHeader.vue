@@ -66,6 +66,7 @@ export default {
   background-color: $header_color;
   padding-top: 15px;
   padding-bottom: 15px;
+  margin-bottom: 40px;
   &__wrapper {
     display: flex;
     align-items: center;

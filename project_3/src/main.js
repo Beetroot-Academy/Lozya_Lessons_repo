@@ -4,7 +4,8 @@ import vuetify from "./plugins/vuetify";
 import "@babel/polyfill";
 import router from "./router";
 import { Plugin } from "vue-responsive-video-background-player";
-
+import JwPagination from "jw-vue-pagination";
+Vue.component("jw-pagination", JwPagination);
 Vue.use(Plugin);
 
 Vue.config.productionTip = false;
