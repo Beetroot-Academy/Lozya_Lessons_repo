@@ -8,6 +8,7 @@ module.exports = defineConfig({
         additionalData: `
 				@import "@/styles/_variables.scss";
         @import "@/styles/style.scss";
+        @import "@/styles/_font-mixin.scss";
         `,
       },
     },

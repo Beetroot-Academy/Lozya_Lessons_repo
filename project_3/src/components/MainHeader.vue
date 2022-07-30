@@ -18,7 +18,7 @@
           </li>
           <li class="nav__item">
             <router-link class="header__link" :to="{ name: 'about-us' }">
-              About Us
+              About
             </router-link>
           </li>
         </ul>
@@ -63,6 +63,10 @@ export default {
   width: 42px;
 }
 .header {
+  position: fixed;
+  top: 0;
+  z-index: 4;
+  width: 100%;
   background-color: $header_color;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -71,6 +75,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 50px;
   }
   &__btn {
     font-size: 12px;
@@ -108,7 +113,8 @@ export default {
 .nav {
   &__list {
     display: flex;
-    gap: 60px;
+    justify-content: space-around;
+    gap: 80px;
   }
 }
 </style>

@@ -14,11 +14,7 @@ const routes = [
     name: "home",
     component: MainPage,
   },
-  {
-    path: "/about",
-    name: "about-us",
-    component: AboutUs,
-  },
+
   {
     path: "/all",
     name: "all",
@@ -36,6 +32,11 @@ const routes = [
       },
     ],
   },
+  {
+    path: "/about",
+    name: "about-us",
+    component: AboutUs,
+  },
 ];
 
 const router = new VueRouter({
@@ -43,5 +44,4 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes,
 });
-
 export default router;

@@ -9,7 +9,9 @@
     >
       <section class="wrapper">
         <div class="logo__wrapper">
-          <div class="logo"><img src="../assets/logo.png" alt="Logo" /></div>
+          <div class="logo">
+            <img src="../assets/logo.png" alt="Logo" />
+          </div>
           <h1 class="title logo__text logo__title">GameCave</h1>
           <span class="subtitle logo__text logo__subtitle"
             >Free-game database</span
@@ -54,14 +56,14 @@ export default {};
 
 <style lang="scss" scoped>
 .logo {
-  width: 100px;
+  width: 80px;
   margin-bottom: 10px;
   &__wrapper {
     margin-top: 60px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 13%;
+    margin-bottom: 10%;
   }
   &__title {
     animation: animateColor 10s ease infinite alternate;

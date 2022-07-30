@@ -1,4 +1,6 @@
 @use "variables" as *;
+@import "font-mixin";
+
 * {
   box-sizing: border-box;
 }
@@ -6,6 +8,7 @@ body {
   font-family: "Ubuntu Mono", monospace;
   color: #c7d5e2;
   background-color: #3d3c3c;
+  scroll-behavior: smooth;
 }
 img {
   max-width: 100%;
@@ -14,7 +17,7 @@ a {
   text-decoration: none;
 }
 .wrapper {
-  max-width: 1300px;
+  max-width: 1200px;
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -27,24 +30,32 @@ a {
   &--primary {
     border: 2px solid transparent;
     font-family: "Press Start 2P", cursive;
-    font-size: 20px;
+    @include fluid-font(15px, 19px);
+
     animation: animateBtn 4s ease infinite alternate;
     text-transform: uppercase;
   }
   &--secondary {
     background-color: $red;
-    font-size: 20px;
+    @include fluid-font(15px, 19px);
+
     border: 2px solid $green;
     color: white;
   }
 }
+.theme--light.v-expansion-panels .v-expansion-panel {
+  background-color: #3d3c3c !important;
+  color: #c7d5e2;
+}
 .title {
-  font-size: 40px;
+  @include fluid-font(20px, 40px);
+  // font-size: 40px;
   line-height: 1.5;
   color: $red;
 }
 .subtitle {
-  font-size: 18px;
+  @include fluid-font(18px, 30px);
+
   color: white;
 }
 
