@@ -1,90 +1,114 @@
 <template>
-  <div class="game-card">
-    <img
-      :src="film.img"
-      :alt="film.title"
-    >
-    <p class="rating">{{ film.rating }}</p>
-    <p class="title">{{ film.title }}</p>
-    <router-link
-      :to="{ name: 'filmPage', params: { id: film.id } }"
-      class="more-info"
-    >
-      Подробнее о фильме
-    </router-link>
-  </div>
+    <div>
+        <router-link
+            class="card__title"
+            :to="{ name: 'game-page', params: { id: card.id } }"
+        >
+            <v-card class="card" max-width="400">
+                <v-img
+                    :src="`${card.thumbnail}`"
+                    gradient="0deg, rgba(0,252,255,0) 43%, rgba(0,0,0,1) 95%"
+                    lazy-src="@/assets/lazy.png"
+                    max-height="226"
+                >
+                    <div class="image-elements">
+                        <span
+                            v-if="card.platform.includes('PC')"
+                            class="fa-brands fa-windows card__platform"
+                        ></span>
+
+                        <span
+                            v-else
+                            class="fa-brands fa-internet-explorer card__platform"
+                        ></span>
+                        <span class="card__genre">{{ card.genre }}</span>
+                    </div>
+                </v-img>
+
+                <div class="card__header">
+                    <h1 class="card__title">{{ card.title }}</h1>
+                </div>
+                <div class="card__body">
+                    <p class="card__text">{{ card.short_description }}</p>
+                </div>
+            </v-card>
+        </router-link>
+    </div>
 </template>
 
 <script>
 export default {
-  props: {
-    film: {
-      type: Object
-    }
-  }
-}
+    props: {
+        card: Object,
+    },
+};
 </script>
 
 <style lang="scss" scoped>
-.film-card {
-  position: relative;
-  img {
-    object-fit: cover;
-    border-radius: 10px;
-    width: 1160px;
-    height: 600px;
-  }
-  .title {
-    position: absolute;
-    margin-bottom: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    color: #ffffff;
-    height: 100px;
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
-    font-weight: 700;
-    padding: 20px;
-    font-size: 30px;
-    border-radius: 0 0 10px 10px;
-  }
-  .rating {
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-color: #EB5804;
-    width: 100px;
-    height: 50px;
-    margin-bottom: 0;
+.image-elements {
+    padding: 5px;
+    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 20px;
-    border-radius: 0 10px 0 10px;
-    opacity: 0.8;
-  }
-  .more-info {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
-    font-size: 30px;
-    text-decoration: none;
-    opacity: 0;
-    transition: all 0.2s ease;
-    &:hover, &:focus {
-      opacity: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.card {
+    background-color: $background_color;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    &:hover {
+        transform: scale(105%);
+        & .v-image__image {
+            background-image: linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0) 100%
+            ) !important;
+        }
     }
-  }
+    &__platform {
+        padding: 3px;
+        border-radius: 10%;
+        color: $blue;
+        font-weight: 600px;
+        font-size: 25px;
+        text-shadow: 0px 0px 8px black;
+        text-align: center;
+        display: inline-block;
+    }
+    &__genre {
+        background-color: $blue;
+        padding: 3px;
+        border-radius: 10%;
+        color: white;
+        font-weight: 600px;
+        text-shadow: 0px 0px 8px black;
+        text-align: center;
+        display: inline-block;
+    }
+    &__header {
+        padding: 10px 10px 0;
+        text-align: center;
+    }
+    &__body {
+        padding: 10px 10px 20px;
+    }
+    &__text {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        color: white;
+        text-align: center;
+    }
+    &__title {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 27px;
+        color: white;
+        padding: 5px;
+        text-align: center;
+    }
 }
 </style>
