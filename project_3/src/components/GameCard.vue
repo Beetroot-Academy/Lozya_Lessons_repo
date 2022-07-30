@@ -85,6 +85,8 @@ export default {
         font-weight: 600px;
         text-shadow: 0px 0px 8px black;
         text-align: center;
+        @include fluid-font(10px, 15px);
+
         display: inline-block;
     }
     &__header {
@@ -100,6 +102,7 @@ export default {
         white-space: nowrap;
         color: white;
         text-align: center;
+        @include fluid-font(10px, 15px);
     }
     &__title {
         text-overflow: ellipsis;

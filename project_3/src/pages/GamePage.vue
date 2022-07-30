@@ -14,7 +14,7 @@
                 >
             </div>
             <div class="game__info">
-                <h1 class="title game__title">
+                <h1 class="no-app-title game__title">
                     {{ game.title }}
                 </h1>
                 <span class="game__developer">{{ game.developer }}</span>
@@ -53,7 +53,23 @@
                         </h2>
                     </v-col>
                 </v-row>
-                <game-screenshots :game="game" />
+                <v-row>
+                    <v-col>
+                        <div class="screenshots">
+                            <img :src="game.screenshots[0].image" />
+                        </div>
+                    </v-col>
+                    <v-col>
+                        <div class="screenshots">
+                            <img :src="game.screenshots[1].image" />
+                        </div>
+                    </v-col>
+                    <v-col>
+                        <div class="screenshots">
+                            <img :src="game.screenshots[2].image" />
+                        </div>
+                    </v-col>
+                </v-row>
                 <v-row>
                     <v-col>
                         <h2 class="subtitle game__subtitle">
@@ -68,11 +84,10 @@
 </template>
 
 <script>
-import GameScreenshots from "@/components/GameScreenshots.vue";
 import GameAdditional from "@/components/AdditionalIndo.vue";
 import SystemRequirements from "@/components/SysReq.vue";
 export default {
-    components: { GameAdditional, GameScreenshots, SystemRequirements },
+    components: { GameAdditional, SystemRequirements },
     data() {
         return {
             game: {},
@@ -102,7 +117,7 @@ export default {
                 .then((data) => {
                     return (this.game = data);
                 })
-                .then((data) => console.log(data))
+
                 .catch((err) => console.error(err));
         },
     },

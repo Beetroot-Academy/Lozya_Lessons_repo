@@ -7,5 +7,10 @@ Vue.use(Vuetify);
 export default new Vuetify({
     theme: {
         dark: true,
+        themes: {
+            dark: {
+                info: "#b92970",
+            },
+        },
     },
 });

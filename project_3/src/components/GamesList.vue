@@ -1,24 +1,29 @@
 <template>
     <div class="wrapper list__wrapper">
         <v-row>
-            <h1 class="title">Best Free Games for PC and Browser In 2022!</h1>
+            <h1 class="list__title">
+                Best Free Games for PC and Browser In 2022!
+            </h1>
         </v-row>
         <v-row>
             <span>354 free-to-play games found in our games list! </span></v-row
         >
-        <div class="cards-list">
-            <game-card
-                v-for="game in pageOfItems"
-                :key="game.id"
-                :card="game"
-            />
+        <game-filter @sendFilter="saveFilter" />
+        <div>
+            <v-row class="cards-list">
+                <game-card
+                    v-for="game in pageOfItems"
+                    :key="game.id"
+                    :card="game"
+                />
+            </v-row>
         </div>
         <div class="cards-footer">
             <jw-pagination
                 :labels="customLabels"
                 :pageSize="pageSize"
                 :styles="customStyles"
-                :items="games"
+                :items="filteredGames || games"
                 :maxPages="maxPages"
                 @changePage="onChangePage"
             ></jw-pagination>
@@ -28,6 +33,8 @@
 
 <script>
 import GameCard from "../components/GameCard.vue";
+import GameFilter from "../components/GameFilter.vue";
+
 const customStyles = {
     ul: {
         display: "flex",
@@ -62,10 +69,14 @@ export default {
             maxPages: 4,
             pageSize: 24,
             pageOfItems: [],
+            filteredGames: null,
         };
     },
-    components: { GameCard },
+    components: { GameCard, GameFilter },
     methods: {
+        saveFilter(event) {
+            this.filteredGames = event;
+        },
         onChangePage(pageOfItems) {
             this.pageOfItems = pageOfItems;
         },
@@ -83,5 +94,10 @@ export default {
 .cards-footer {
     display: flex;
     justify-content: center;
+}
+.button--centred {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 </style>

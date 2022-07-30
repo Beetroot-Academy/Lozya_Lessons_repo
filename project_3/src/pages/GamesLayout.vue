@@ -1,9 +1,9 @@
 <template>
     <div class="bigwrap">
         <main-header />
-        <section class="dinamic-view">
+        <v-app class="dinamic-view">
             <router-view></router-view>
-        </section>
+        </v-app>
         <main-footer />
     </div>
 </template>

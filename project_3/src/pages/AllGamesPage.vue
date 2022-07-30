@@ -32,7 +32,7 @@ export default {
                 .then((data) => {
                     return (this.gamesList = data);
                 })
-                .then((data) => console.log(data))
+
                 .catch((err) => console.error(err));
         },
     },

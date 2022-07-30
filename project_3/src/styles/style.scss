@@ -2,78 +2,84 @@
 @import "font-mixin";
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 body {
-  font-family: "Ubuntu Mono", monospace;
-  color: #c7d5e2;
-  background-color: #3d3c3c;
-  scroll-behavior: smooth;
+    font-family: "Ubuntu Mono", monospace;
+    color: #c7d5e2;
+    background-color: #3d3c3c;
+    scroll-behavior: smooth;
 }
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 .wrapper {
-  max-width: 1200px;
-  padding: 0 20px;
-  margin: 0 auto;
+    max-width: 1250px;
+    padding: 0 20px;
+    margin: 0 auto;
+    width: 100%;
 }
-
+.v-list-item__title {
+    text-transform: capitalize;
+}
 .button {
-  display: inline-block;
-  padding: 20px 20px;
-  border-radius: 6px;
+    display: inline-block;
+    padding: 20px 20px;
+    border-radius: 6px;
 
-  &--primary {
-    border: 2px solid transparent;
-    font-family: "Press Start 2P", cursive;
-    @include fluid-font(15px, 19px);
+    &--primary {
+        border: 2px solid transparent;
+        font-family: "Press Start 2P", cursive;
+        @include fluid-font(15px, 19px);
 
-    animation: animateBtn 4s ease infinite alternate;
-    text-transform: uppercase;
-  }
-  &--secondary {
-    background-color: $red;
-    @include fluid-font(15px, 19px);
+        animation: animateBtn 4s ease infinite alternate;
+        text-transform: uppercase;
+    }
+    &--secondary {
+        background-color: $red;
+        @include fluid-font(15px, 19px);
 
-    border: 2px solid $green;
-    color: white;
-  }
+        border: 2px solid $green;
+        color: white;
+    }
 }
 .theme--light.v-expansion-panels .v-expansion-panel {
-  background-color: #3d3c3c !important;
-  color: #c7d5e2;
+    background-color: #3d3c3c !important;
+    color: #c7d5e2;
 }
-.title {
-  @include fluid-font(20px, 40px);
-  // font-size: 40px;
-  line-height: 1.5;
-  color: $red;
+
+.no-app-title {
+    @include fluid-font(20px, 40px);
+    // font-size: 40px;
+    line-height: 1.5;
+    color: $red;
 }
 .subtitle {
-  @include fluid-font(18px, 30px);
+    @include fluid-font(18px, 30px);
 
-  color: white;
+    color: white;
 }
-
+.list__title {
+    @include fluid-font(18px, 30px);
+}
 @keyframes animateBtn {
-  0% {
-    border: 2px solid $red;
-    color: $yellow;
-  }
-  50% {
-    border: 2px solid $blue;
-    color: $green;
-  }
-  75% {
-    border: 2px solid $green;
-    color: $blue;
-  }
-  100% {
-    border: 2px solid $yellow;
-    color: $red;
-  }
+    0% {
+        border: 2px solid $red;
+        color: $yellow;
+    }
+    50% {
+        border: 2px solid $blue;
+        color: $green;
+    }
+    75% {
+        border: 2px solid $green;
+        color: $blue;
+    }
+    100% {
+        border: 2px solid $yellow;
+        color: $red;
+    }
 }

@@ -12,13 +12,15 @@
                     <div class="logo">
                         <img src="../assets/logo.png" alt="Logo" />
                     </div>
-                    <h1 class="title logo__text logo__title">GameCave</h1>
+                    <h1 class="no-app-title logo__text logo__title">
+                        GameCave
+                    </h1>
                     <span class="subtitle logo__text logo__subtitle"
                         >Free-game database</span
                     >
                 </div>
                 <div class="info">
-                    <h2 class="title info__title">
+                    <h2 class="no-app-title info__title">
                         Find the best free-to-play games!
                     </h2>
                     <p class="text info__text">

@@ -21,7 +21,52 @@
                     </router-link></v-col
                 >
             </v-row>
-            <v-row class="trade-mark"><span> &#xA9; GameCave</span></v-row>
+            <v-row class="flex-centered">
+                <v-col>
+                    <ul class="social">
+                        <li>
+                            <a
+                                href="http://facebook.com"
+                                target="_blank"
+                                rel="noopener norefer"
+                                class="button button--primary social__btn"
+                            >
+                                <span
+                                    class="fa-brands fa-square-facebook"
+                                ></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="
+                                        https://twitter.com"
+                                target="_blank"
+                                rel="noopener norefer"
+                                class="button button--primary social__btn"
+                            >
+                                <span
+                                    class="fa-brands fa-square-twitter"
+                                ></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="http://github.com"
+                                target="_blank"
+                                rel="noopener norefer"
+                                class="button button--primary social__btn"
+                            >
+                                <span class="fa-brands fa-square-github"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </v-col>
+            </v-row>
+            <v-row>
+                <v-col class="flex-centered">
+                    <span class="trade-mark"> &#xA9; GameCave</span>
+                </v-col>
+            </v-row>
         </div>
     </v-footer>
 </template>
@@ -36,14 +81,16 @@ export default {};
     gap: 60px;
     margin-bottom: 10px;
 }
-.trade-mark {
+.flex-centered {
+    display: flex;
     justify-content: center;
-    & > span {
-        color: #c7d5e2;
-    }
+}
+.trade-mark {
+    color: #c7d5e2;
+    text-align: center;
 }
 .footer {
-    background-color: #3d3c3c;
+    background-color: $header_color;
     padding: 40px 0;
 
     &__link {
@@ -73,6 +120,16 @@ export default {};
                 background-color: $yellow;
             }
         }
+    }
+}
+.social {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    &__btn {
+        font-size: 25px;
+        padding: 0px;
+        border: none !important;
     }
 }
 </style>

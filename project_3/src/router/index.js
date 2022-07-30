@@ -5,6 +5,7 @@ import GamesLayout from "@/pages/GamesLayout.vue";
 import AllGamesPage from "@/pages/AllGamesPage.vue";
 import GamePage from "@/pages/GamePage.vue";
 import AboutUs from "@/pages/AboutUs";
+import SearchGames from "@/pages/SearchGames";
 
 Vue.use(VueRouter);
 
@@ -29,6 +30,11 @@ const routes = [
                 path: ":id",
                 name: "game-page",
                 component: GamePage,
+            },
+            {
+                path: "/search",
+                name: "search",
+                component: SearchGames,
             },
         ],
     },

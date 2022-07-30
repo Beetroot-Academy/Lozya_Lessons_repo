@@ -29,13 +29,12 @@
                     </li>
                 </ul>
             </nav>
-            <button
-                type="button"
+            <router-link
+                :to="{ name: 'search' }"
                 class="button button--primary header__btn"
-                @click="changeUserState"
             >
-                {{ auth ? "Log in" : "Log Out" }}
-            </button>
+                <span class="fa-solid fa-magnifying-glass"></span>
+            </router-link>
         </div>
     </header>
 </template>
@@ -50,17 +49,7 @@ export default {
     created() {
         this.auth = localStorage.getItem("auth") !== null;
     },
-    methods: {
-        changeUserState() {
-            if (this.auth) {
-                localStorage.removeItem("auth");
-                this.$router.push({ name: "home" });
-            } else {
-                localStorage.setItem("auth", true);
-                this.auth = true;
-            }
-        },
-    },
+    methods: {},
 };
 </script>
 
@@ -84,8 +73,9 @@ export default {
         padding: 0 50px;
     }
     &__btn {
-        font-size: 12px;
-        padding: 15px 15px;
+        font-size: 24px;
+        padding: 0;
+        border: none !important;
     }
     &__link {
         font-family: "Press Start 2P", cursive;
