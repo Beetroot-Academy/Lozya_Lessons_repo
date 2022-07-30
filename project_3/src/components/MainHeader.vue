@@ -36,31 +36,31 @@
 
 <script>
 export default {
-    data() {
-        return {
-            auth: false,
-        };
+  data() {
+    return {
+      auth: false,
+    };
+  },
+  created() {
+    this.auth = localStorage.getItem("auth") !== null;
+  },
+  methods: {
+    changeUserState() {
+      if (this.auth) {
+        localStorage.removeItem("auth");
+        this.$router.push({ name: "home" });
+      } else {
+        localStorage.setItem("auth", true);
+        this.auth = true;
+      }
     },
-    created() {
-        this.auth = localStorage.getItem("auth") !== null;
-    },
-    methods: {
-        changeUserState() {
-            if (this.auth) {
-                localStorage.removeItem("auth");
-                this.$router.push({ name: "home" });
-            } else {
-                localStorage.setItem("auth", true);
-                this.auth = true;
-            }
-        },
-    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .logo {
-    width: 42px;
+  width: 42px;
 }
 .header {
   position: fixed;
@@ -101,37 +101,38 @@ export default {
       transition: transform 0.25s ease-out;
     }
     &__btn {
-        font-size: 12px;
-        padding: 15px 15px;
+      font-size: 12px;
+      padding: 15px 15px;
     }
     &__link {
-        font-family: "Press Start 2P", cursive;
-        color: $red;
-        font-size: 15px;
-        position: relative;
-        transition: color 0.3s ease;
-        &:after {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 100%;
-            transform: scaleX(0);
-            height: 2px;
-            bottom: -3px;
-            left: 0;
-            background-color: $red;
-            transform-origin: bottom right;
-            transition: transform 0.25s ease-out;
+      font-family: "Press Start 2P", cursive;
+      color: $red;
+      font-size: 15px;
+      position: relative;
+      transition: color 0.3s ease;
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: -3px;
+        left: 0;
+        background-color: $red;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+      &:hover {
+        color: $yellow;
+        &::after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+          background-color: $yellow;
         }
-        &:hover {
-            color: $yellow;
-            &::after {
-                transform: scaleX(1);
-                transform-origin: bottom left;
-                background-color: $yellow;
-            }
-        }
+      }
     }
+  }
 }
 .nav {
   &__list {

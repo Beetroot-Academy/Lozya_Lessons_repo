@@ -78,64 +78,64 @@ export default {};
 }
 
 .info {
-    text-align: center;
-    &__title {
-        font-family: "Press Start 2P", cursive;
-        color: white;
-        animation: textShadow 8s ease infinite alternate-reverse;
-        padding: 15px;
-        text-transform: uppercase;
-    }
+  text-align: center;
+  &__title {
+    font-family: "Press Start 2P", cursive;
+    color: white;
+    animation: textShadow 8s ease infinite alternate-reverse;
+    padding: 15px;
+    text-transform: uppercase;
+  }
 
-    &__text {
-        font-size: 27px;
-        font-weight: 600;
-        color: #ffcd00;
-        text-shadow: #000000 2px 2px 2px;
-        padding-bottom: 30px;
-    }
-    &__btn {
-        background-color: transparent;
-        color: $green;
-        text-shadow: #000000 2px 2px 2px;
+  &__text {
+    font-size: 27px;
+    font-weight: 600;
+    color: #ffcd00;
+    text-shadow: #000000 2px 2px 2px;
+    padding-bottom: 30px;
+  }
+  &__btn {
+    background-color: transparent;
+    color: $green;
+    text-shadow: #000000 2px 2px 2px;
 
-        transition: all 0.3s ease;
-        &:hover {
-            background-color: $green;
-            color: white;
-        }
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: $green;
+      color: white;
     }
+  }
 }
 .playback {
-    background-image: url("../assets/bg.png");
-    background-size: cover;
+  background-image: url("../assets/bg.png");
+  background-size: cover;
 }
 @keyframes textShadow {
-    0% {
-        text-shadow: #e95b56 3px 3px 4px;
-    }
-    50% {
-        text-shadow: #22edfa 3px 3px 4px;
-    }
-    75% {
-        text-shadow: #bde57c 3px 3px 4px;
-    }
-    100% {
-        text-shadow: #ffcd00 3px 3px 4px;
-    }
+  0% {
+    text-shadow: #e95b56 3px 3px 4px;
+  }
+  50% {
+    text-shadow: #22edfa 3px 3px 4px;
+  }
+  75% {
+    text-shadow: #bde57c 3px 3px 4px;
+  }
+  100% {
+    text-shadow: #ffcd00 3px 3px 4px;
+  }
 }
 @keyframes animateColor {
-    0% {
-        color: #e95b56;
-    }
-    50% {
-        color: #22edfa;
-    }
-    75% {
-        color: #bde57c;
-    }
-    100% {
-        color: #ffcd00;
-    }
+  0% {
+    color: #e95b56;
+  }
+  50% {
+    color: #22edfa;
+  }
+  75% {
+    color: #bde57c;
+  }
+  100% {
+    color: #ffcd00;
+  }
 }
 </style>
