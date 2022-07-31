@@ -2,24 +2,32 @@
     <v-footer class="footer">
         <div class="footer__wrapper wrapper">
             <v-row class="flex-container">
-                <v-col
-                    ><router-link class="footer__link" :to="{ name: 'home' }">
-                        Home
-                    </router-link></v-col
-                >
-                <v-col
-                    ><router-link class="footer__link" :to="{ name: 'all' }">
-                        Games
-                    </router-link></v-col
-                >
-                <v-col
-                    ><router-link
-                        class="footer__link"
-                        :to="{ name: 'about-us' }"
-                    >
-                        About
-                    </router-link></v-col
-                >
+                <ul class="footer__nav">
+                    <li>
+                        <router-link
+                            class="footer__link"
+                            :to="{ name: 'home' }"
+                        >
+                            Home
+                        </router-link>
+                    </li>
+                    <li>
+                        <router-link
+                            class="footer__link"
+                            :to="{ path: '/all' }"
+                        >
+                            Games
+                        </router-link>
+                    </li>
+                    <li>
+                        <router-link
+                            class="footer__link"
+                            :to="{ name: 'about-us' }"
+                        >
+                            About
+                        </router-link>
+                    </li>
+                </ul>
             </v-row>
             <v-row class="flex-centered">
                 <v-col>
@@ -92,7 +100,12 @@ export default {};
 .footer {
     background-color: $header_color;
     padding: 40px 0;
-
+    &__nav {
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+        width: 100%;
+    }
     &__link {
         font-family: "Press Start 2P", cursive;
         color: $red;

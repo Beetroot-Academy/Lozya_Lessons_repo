@@ -18,7 +18,7 @@ export default {
 
 <style lang="scss" scoped>
 .dinamic-view {
-    padding-top: 100px;
+    padding-top: 75px;
     background: linear-gradient(
         356deg,
         rgba(0, 0, 0, 0.46) 20%,
@@ -28,6 +28,6 @@ export default {
     background-size: cover;
     background-attachment: fixed;
     position: relative;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
 }
 </style>

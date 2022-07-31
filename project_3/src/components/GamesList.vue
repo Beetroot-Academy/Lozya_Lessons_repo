@@ -1,11 +1,11 @@
 <template>
     <div class="wrapper list__wrapper">
-        <v-row>
-            <h1 class="list__title">
+        <v-row class="flex-center">
+            <h1 class="list__title no-app-title">
                 Best Free Games for PC and Browser In 2022!
             </h1>
         </v-row>
-        <v-row>
+        <v-row class="flex-center">
             <span>354 free-to-play games found in our games list! </span></v-row
         >
         <game-filter @sendFilter="saveFilter" />
@@ -87,9 +87,19 @@ export default {
 <style lang="scss" scoped>
 .cards-list {
     display: grid;
+    justify-content: center;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    column-gap: 20px;
+    row-gap: 20px;
     padding-bottom: 30px;
+}
+@media screen and (max-width: $tablet) {
+    .cards-list {
+        column-gap: 4%;
+        row-gap: 10px;
+        grid-template-columns: 43% 43%;
+        padding-bottom: 0;
+    }
 }
 .cards-footer {
     display: flex;
@@ -99,5 +109,9 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
 }
 </style>

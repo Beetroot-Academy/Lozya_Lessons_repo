@@ -40,7 +40,7 @@
                         </v-col>
                         <v-col>
                             <button
-                                @click="$router.push({ name: 'all' })"
+                                @click="$router.push({ path: '/all' })"
                                 class="button button--primary"
                             >
                                 Play
@@ -62,6 +62,7 @@ export default {};
 .logo {
     width: 80px;
     margin-bottom: 10px;
+
     &__wrapper {
         margin-top: 60px;
         display: flex;
@@ -92,7 +93,8 @@ export default {};
     }
 
     &__text {
-        font-size: 27px;
+        @include fluid-font(15px, 24px);
+
         font-weight: 600;
         color: #ffcd00;
         text-shadow: #000000 2px 2px 2px;
@@ -113,6 +115,11 @@ export default {};
 .playback {
     background-image: url("../assets/bg.png");
     background-size: cover;
+}
+@media screen and (max-width: $tablet) {
+    .logo {
+        width: 50px;
+    }
 }
 @keyframes textShadow {
     0% {

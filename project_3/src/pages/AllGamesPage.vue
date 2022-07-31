@@ -1,5 +1,8 @@
 <template>
-    <games-list :games="gamesList" />
+    <div v-if="isLoading" class="loader">
+        <img src="@/assets/chicken.gif" alt="loading" />
+    </div>
+    <games-list v-else :games="gamesList" />
 </template>
 <script>
 import GamesList from "@/components/GamesList.vue";
@@ -8,6 +11,7 @@ export default {
     components: { GamesList },
     data() {
         return {
+            isLoading: Boolean,
             gamesList: [],
             options: {
                 method: "GET",
@@ -22,6 +26,7 @@ export default {
     },
     methods: {
         async fetchAll() {
+            this.isLoading = true;
             await fetch(
                 "https://free-to-play-games-database.p.rapidapi.com/api/games",
                 this.options
@@ -32,8 +37,8 @@ export default {
                 .then((data) => {
                     return (this.gamesList = data);
                 })
-
-                .catch((err) => console.error(err));
+                .catch((err) => console.error(err))
+                .finally(() => (this.isLoading = false));
         },
     },
     mounted() {},
@@ -43,4 +48,21 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.loader {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: linear-gradient(
+        356deg,
+        rgba(0, 0, 0, 0.46) 20%,
+        rgba(0, 0, 0, 0.45702030812324934) 71%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+</style>

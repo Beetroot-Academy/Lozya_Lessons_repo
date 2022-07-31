@@ -1,24 +1,28 @@
 <template>
-    <div class="wrapper">
-        <h1 class="no-app-title search__title">Find game here:</h1>
+    <v-app>
+        <div class="wrapper">
+            <h1 class="no-app-title search__title">Find game here:</h1>
 
-        <v-text-field
-            v-model="searchText"
-            label="Search for games"
-            placeholder="Type game name here..."
-            outlined
-            class="search-field"
-            color="info"
-        ></v-text-field>
-
-        <v-row class="cards-list">
-            <game-card
-                v-for="game in searchResults"
-                :key="game.id"
-                :card="game"
-            />
-        </v-row>
-    </div>
+            <v-text-field
+                v-model="searchText"
+                label="Search for games"
+                placeholder="Type game name here..."
+                outlined
+                class="search-field"
+                color="info"
+            ></v-text-field>
+            <v-row v-if="!searchResults.length && searchText.length >= 3">
+                <span>No Result...</span>
+            </v-row>
+            <v-row v-else class="cards-list">
+                <game-card
+                    v-for="game in searchResults"
+                    :key="game.id"
+                    :card="game"
+                />
+            </v-row>
+        </div>
+    </v-app>
 </template>
 
 <script>
@@ -46,6 +50,10 @@ export default {
     computed: {},
     watch: {
         searchText(userSearch) {
+            if (userSearch.length < 3) {
+                this.searchResults = [];
+                return;
+            }
             const arr = userSearch.split(" ");
             for (let i = 0; i < arr.length; i++) {
                 arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
@@ -55,9 +63,6 @@ export default {
                 this.searchResults = this.gamesList.filter((game) =>
                     game.title.includes(userSearch)
                 );
-            }
-            if (userSearch.length < 3) {
-                this.searchResults = [];
             }
         },
     },
@@ -87,9 +92,19 @@ export default {
 <style lang="scss" scoped>
 .cards-list {
     display: grid;
+    justify-content: center;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    column-gap: 20px;
+    row-gap: 20px;
     padding-bottom: 30px;
+}
+@media screen and (max-width: $tablet) {
+    .cards-list {
+        column-gap: 4%;
+        row-gap: 10px;
+        grid-template-columns: 43% 43%;
+        padding-bottom: 0;
+    }
 }
 .search {
     &__title {

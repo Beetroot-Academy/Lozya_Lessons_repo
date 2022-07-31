@@ -54,20 +54,18 @@
                     </v-col>
                 </v-row>
                 <v-row>
-                    <v-col>
-                        <div class="screenshots">
-                            <img :src="game.screenshots[0].image" />
-                        </div>
-                    </v-col>
-                    <v-col>
-                        <div class="screenshots">
-                            <img :src="game.screenshots[1].image" />
-                        </div>
-                    </v-col>
-                    <v-col>
-                        <div class="screenshots">
-                            <img :src="game.screenshots[2].image" />
-                        </div>
+                    <v-col
+                        v-for="sreenshot in game.screenshots"
+                        :key="sreenshot.id"
+                        class="flex-center"
+                    >
+                        <v-img
+                            lazy-src="@/assets/chicken.gif"
+                            max-height="150"
+                            max-width="250"
+                            :src="sreenshot.image"
+                            class="screenshots"
+                        ></v-img>
                     </v-col>
                 </v-row>
                 <v-row>
@@ -131,13 +129,11 @@ export default {
 
 <style lang="scss" scoped>
 .game {
+    padding: 15px 0;
     &__wrapper {
         position: relative;
         display: grid;
         grid-template-columns: 0.5fr 1fr;
-    }
-
-    &__side {
     }
 
     &__pic {
@@ -147,27 +143,64 @@ export default {
         }
     }
 
-    &__info {
-    }
-
-    &__title {
-    }
-
-    &__developer {
-    }
-
-    &__about {
-    }
     &__subtitle {
         color: $blue;
     }
 }
+@media screen and (max-width: $tablet) {
+    .game {
+        &__wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
+        &__side {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__pic {
+            margin-bottom: 10px;
+            & > img {
+                border-radius: 2%;
+            }
+        }
+
+        &__title {
+            text-align: center;
+        }
+
+        &__developer {
+            display: block;
+            text-align: center;
+        }
+        .about {
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+            &__header {
+                text-align: center;
+            }
+        }
+    }
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .about {
     width: fit-content;
     display: block;
     margin-bottom: 20px;
     &__wrapper {
+        &.v-expansion-panel {
+            background-color: $header_color;
+        }
     }
 
     &__header {

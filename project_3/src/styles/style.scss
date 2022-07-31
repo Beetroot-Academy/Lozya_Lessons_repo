@@ -29,11 +29,14 @@ a {
     display: inline-block;
     padding: 20px 20px;
     border-radius: 6px;
+    @media screen and (max-width: $tablet) {
+        padding: 10px;
+    }
 
     &--primary {
         border: 2px solid transparent;
         font-family: "Press Start 2P", cursive;
-        @include fluid-font(15px, 19px);
+        @include fluid-font(15px, 18px);
 
         animation: animateBtn 4s ease infinite alternate;
         text-transform: uppercase;
@@ -50,10 +53,84 @@ a {
     background-color: #3d3c3c !important;
     color: #c7d5e2;
 }
+.v-application .mr-4 {
+    margin-right: 0 !important;
+}
+.bm-burger-button {
+    display: none;
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    left: 36px;
+    top: 25px !important;
+    cursor: pointer;
+}
+.bm-burger-bars {
+    @include animateBgcolor;
+}
+.line-style {
+    position: absolute;
+    height: 20%;
+    left: 0;
+    right: 0;
+}
+.cross-style {
+    position: absolute;
+    top: 12px;
+    right: 2px;
+    cursor: pointer;
+}
+.bm-cross {
+    @include animateBgcolor;
+
+    height: 25px !important;
+}
+.bm-cross-button {
+    height: 24px;
+    width: 24px;
+}
+.bm-menu {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: rgb(63, 63, 65); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /*0.5 second transition effect to slide in the sidenav*/
+}
+
+.bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+}
+.bm-item-list {
+    color: #b8b7ad;
+    margin-left: 10%;
+    font-size: 20px;
+}
+.bm-item-list > * {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0.7em;
+}
+.bm-item-list > * > span {
+    margin-left: 10px;
+    font-weight: 700;
+    color: white;
+}
+@media screen and (max-width: $tablet) {
+    .bm-burger-button {
+        display: block;
+    }
+}
 
 .no-app-title {
     @include fluid-font(20px, 40px);
     // font-size: 40px;
+    font-family: "Ubuntu Mono", monospace;
     line-height: 1.5;
     color: $red;
 }
@@ -64,6 +141,9 @@ a {
 }
 .list__title {
     @include fluid-font(18px, 30px);
+}
+.list__wrapper {
+    padding-top: 10px;
 }
 @keyframes animateBtn {
     0% {

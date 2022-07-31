@@ -8,7 +8,7 @@
                 <v-img
                     :src="`${card.thumbnail}`"
                     gradient="0deg, rgba(0,252,255,0) 43%, rgba(0,0,0,1) 95%"
-                    lazy-src="@/assets/lazy.png"
+                    lazy-src="@/assets/chicken.gif"
                     max-height="226"
                 >
                     <div class="image-elements">
@@ -108,8 +108,9 @@ export default {
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
-        font-size: 27px;
-        color: white;
+        @include fluid-font(18px, 27px);
+        color: $blue;
+
         padding: 5px;
         text-align: center;
     }

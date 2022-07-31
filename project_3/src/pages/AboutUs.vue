@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <v-app>
         <main-header />
         <section class="about-us">
             <div class="wrapper">
@@ -50,7 +50,7 @@
             </div>
         </section>
         <main-footer />
-    </div>
+    </v-app>
 </template>
 
 <script>

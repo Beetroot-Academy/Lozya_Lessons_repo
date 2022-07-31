@@ -15,7 +15,10 @@
                         </router-link>
                     </li>
                     <li class="nav__item">
-                        <router-link class="header__link" :to="{ name: 'all' }">
+                        <router-link
+                            class="header__link"
+                            :to="{ path: '/all' }"
+                        >
                             Games
                         </router-link>
                     </li>
@@ -29,6 +32,43 @@
                     </li>
                 </ul>
             </nav>
+            <Slide right>
+                <nav class="nav--burger">
+                    <ul class="nav__list--burger">
+                        <li class="nav__item">
+                            <router-link
+                                class="header__link"
+                                :to="{ name: 'home' }"
+                            >
+                                Home
+                            </router-link>
+                        </li>
+                        <li class="nav__item">
+                            <router-link
+                                class="header__link"
+                                :to="{ path: '/all' }"
+                            >
+                                Games
+                            </router-link>
+                        </li>
+                        <li class="nav__item">
+                            <router-link
+                                class="header__link"
+                                :to="{ name: 'about-us' }"
+                            >
+                                About
+                            </router-link>
+                        </li>
+                        <router-link
+                            :to="{ name: 'search' }"
+                            class="button button--primary header__btn--burger"
+                        >
+                            <span class="fa-solid fa-magnifying-glass"></span>
+                            Search
+                        </router-link>
+                    </ul>
+                </nav>
+            </Slide>
             <router-link
                 :to="{ name: 'search' }"
                 class="button button--primary header__btn"
@@ -40,7 +80,9 @@
 </template>
 
 <script>
+import { Slide } from "vue-burger-menu";
 export default {
+    components: { Slide },
     data() {
         return {
             auth: false,
@@ -54,6 +96,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.fa-magnifying-glass {
+    margin-left: 5px;
+}
 .logo {
     width: 42px;
 }
@@ -76,6 +121,13 @@ export default {
         font-size: 24px;
         padding: 0;
         border: none !important;
+        &--burger {
+            font-size: 15px;
+
+            border: none !important;
+            padding: 0;
+            text-transform: capitalize;
+        }
     }
     &__link {
         font-family: "Press Start 2P", cursive;
@@ -135,6 +187,24 @@ export default {
         display: flex;
         justify-content: space-around;
         gap: 80px;
+    }
+}
+@media screen and(max-width: $tablet ) {
+    .nav__list {
+        display: none;
+    }
+    .header__btn {
+        display: none;
+    }
+    .nav__list--burger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 80px;
+    }
+    .header__wrapper {
+        padding: 0 20px;
     }
 }
 </style>

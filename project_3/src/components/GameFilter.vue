@@ -156,7 +156,7 @@ export default {
 <style lang="scss" scoped>
 .button--centred {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 </style>
