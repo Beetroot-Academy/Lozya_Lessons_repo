@@ -1,5 +1,8 @@
 <template>
-  <section class="game">
+  <div v-if="isLoading" class="loader">
+    <img src="@/assets/chicken.gif" alt="loading" />
+  </div>
+  <section v-else class="game">
     <div class="wrapper game__wrapper">
       <div class="game__side">
         <div class="game__pic">
@@ -83,6 +86,8 @@ export default {
   components: { GameAdditional, SystemRequirements },
   data() {
     return {
+      isLoading: Boolean,
+
       game: {},
       isClicked: true,
       gameId: "",
@@ -99,6 +104,8 @@ export default {
   },
   methods: {
     async fetchGame() {
+      this.isLoading = true;
+
       await fetch(
         `https://free-to-play-games-database.p.rapidapi.com/api/game?id=${this.gameId}`,
         this.options
@@ -110,7 +117,8 @@ export default {
           return (this.game = data);
         })
 
-        .catch((err) => console.error(err));
+        .catch((err) => console.error(err))
+        .finally(() => (this.isLoading = false));
     },
   },
   created() {
@@ -122,6 +130,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: linear-gradient(
+    356deg,
+    rgba(0, 0, 0, 0.46) 20%,
+    rgba(0, 0, 0, 0.45702030812324934) 71%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .game {
   padding: 15px 0;
   &__wrapper {
