@@ -7,7 +7,7 @@
         {
           src: ``,
           res: 480,
-          poster: '../assets/bg.png',
+          poster: '',
         },
       ]"
       style="max-height: 100vh; height: 100vh"
