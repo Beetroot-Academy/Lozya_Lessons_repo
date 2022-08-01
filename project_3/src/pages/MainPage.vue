@@ -11,7 +11,7 @@
         },
       ]"
       style="max-height: 100vh; height: 100vh"
-      overlay="linear-gradient(0deg, rgba(0,252,255,0) 43%, rgba(0,0,0,1) 95%)"
+      overlay="linear-gradient(0deg, rgba(0,0,0,0.4318102240896359) 43%, rgba(0,0,0,0.7959558823529411) 92%)"
       transition="fade"
     >
       <section class="wrapper">
