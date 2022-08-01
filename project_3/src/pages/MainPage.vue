@@ -3,6 +3,13 @@
     <video-background
       :src="require(`../assets/vid.mp4`)"
       poster="../assets/bg.png"
+      :sources="[
+        {
+          src: ``,
+          res: 480,
+          poster: '../assets/bg.png',
+        },
+      ]"
       style="max-height: 100vh; height: 100vh"
       overlay="linear-gradient(0deg, rgba(0,252,255,0) 43%, rgba(0,0,0,1) 95%)"
       transition="fade"
@@ -127,6 +134,7 @@ export default {};
     align-items: center;
   }
 }
+
 @keyframes textShadow {
   0% {
     text-shadow: #e95b56 3px 3px 4px;
