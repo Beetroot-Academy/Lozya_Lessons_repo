@@ -10,49 +10,47 @@ import SearchGames from "@/pages/SearchGames";
 Vue.use(VueRouter);
 
 const routes = [
-    {
-        path: "/",
-        name: "home",
-        component: MainPage,
-    },
+  {
+    path: "/",
+    name: "home",
+    component: MainPage,
+  },
 
-    {
-        path: "/all",
-        name: "all",
-        component: GamesLayout,
-        children: [
-            {
-                path: "",
-                // name: "all-games",
-                component: AllGamesPage,
-            },
-            {
-                path: ":id",
-                name: "game-page",
-                component: GamePage,
-            },
-            {
-                path: "/search",
-                name: "search",
-                component: SearchGames,
-            },
-            {
-                path: "/about",
-                name: "about-us",
-                component: AboutUs,
-            },
-        ],
-        scrollBehavior() {
-            document
-                .getElementsById("app")
-                .scrollIntoView({ behavior: "smooth" });
-        },
+  {
+    path: "/all",
+    name: "all",
+    component: GamesLayout,
+    children: [
+      {
+        path: "",
+        // name: "all-games",
+        component: AllGamesPage,
+      },
+      {
+        path: ":id",
+        name: "game-page",
+        component: GamePage,
+      },
+      {
+        path: "/search",
+        name: "search",
+        component: SearchGames,
+      },
+      {
+        path: "/about",
+        name: "about-us",
+        component: AboutUs,
+      },
+    ],
+    scrollBehavior() {
+      document.getElementsById("app").scrollIntoView({ behavior: "smooth" });
     },
+  },
 ];
 
 const router = new VueRouter({
-    mode: "history",
-    base: process.env.BASE_URL,
-    routes,
+  mode: "history",
+  base: process.env.BASE_URL,
+  routes,
 });
 export default router;
