@@ -11,7 +11,7 @@ Vue.use(Plugin);
 Vue.config.productionTip = false;
 
 new Vue({
-  vuetify,
-  router,
-  render: (h) => h(App),
+    vuetify,
+    router,
+    render: (h) => h(App),
 }).$mount("#app");
