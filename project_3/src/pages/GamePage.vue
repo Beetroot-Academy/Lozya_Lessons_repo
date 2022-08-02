@@ -58,12 +58,15 @@
             class="flex-center"
           >
             <v-img
+              @click="click"
               lazy-src="@/assets/chicken.gif"
               max-height="150"
               :src="sreenshot.image"
               class="screenshots"
             ></v-img>
           </v-col>
+          <div></div>
+          <FsLightbox :toggler="toggler" :sources="screenshots" />
         </v-row>
         <v-row>
           <v-col>
@@ -81,16 +84,17 @@
 <script>
 import GameAdditional from "@/components/AdditionalIndo.vue";
 import SystemRequirements from "@/components/SysReq.vue";
+import FsLightbox from "fslightbox-vue";
 export default {
-  components: { GameAdditional, SystemRequirements },
+  components: { GameAdditional, SystemRequirements, FsLightbox },
   data() {
     return {
       isLoading: Boolean,
-
+      toggler: false,
       game: {},
       isClicked: true,
       gameId: "",
-
+      screenshots: [],
       options: {
         method: "GET",
         headers: {
@@ -102,6 +106,13 @@ export default {
     };
   },
   methods: {
+    click() {
+      this.toggler = !this.toggler;
+      this.screenshots = new Array(
+        this.game.screenshots.map((obj) => obj.image)
+      );
+      console.log(this.screenshots);
+    },
     async fetchGame() {
       this.isLoading = true;
 
@@ -115,6 +126,10 @@ export default {
         .then((data) => {
           return (this.game = data);
         })
+        .then(
+          () =>
+            (this.screenshots = this.game.screenshots.map((obj) => obj.image))
+        )
 
         .catch((err) => console.error(err))
         .finally(() => (this.isLoading = false));

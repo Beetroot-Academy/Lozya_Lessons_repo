@@ -10,6 +10,7 @@
     "dependencies": {
         "@babel/polyfill": "^7.4.4",
         "core-js": "^3.8.3",
+        "fslightbox-vue": "^2.0.1",
         "jw-vue-pagination": "^1.0.3",
         "node-sass": "^7.0.1",
         "sass-loader": "^13.0.2",
