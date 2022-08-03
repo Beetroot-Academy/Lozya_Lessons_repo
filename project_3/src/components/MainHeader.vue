@@ -23,7 +23,7 @@
           </li>
         </ul>
       </nav>
-      <Slide right class="burger__menu">
+      <Slide right :closeOnNavigation="true" class="burger__menu">
         <nav class="nav--burger">
           <ul class="nav__list--burger">
             <li class="nav__item">
