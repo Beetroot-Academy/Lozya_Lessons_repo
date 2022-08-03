@@ -232,6 +232,16 @@ export default {
     font-size: 19px;
   }
 }
+@media screen and (min-width: $tablet) {
+  .game {
+    &__side {
+      margin-right: 20px;
+    }
+    &__button {
+      text-align: center;
+    }
+  }
+}
 @media screen and (max-width: $tablet) {
   .game {
     &__wrapper {

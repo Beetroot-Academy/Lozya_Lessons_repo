@@ -148,11 +148,21 @@ export default {
   justify-content: flex-end;
   align-items: center;
 }
+.mobile-flex {
+  width: 100%;
+}
 @media screen and (max-width: $mobile) {
   .mobile-flex {
     display: flex;
     align-items: center;
     flex-direction: column;
+  }
+  .button--centred {
+    justify-content: center;
+  }
+  .list__filter {
+    display: flex;
+    justify-content: center;
   }
 }
 </style>
