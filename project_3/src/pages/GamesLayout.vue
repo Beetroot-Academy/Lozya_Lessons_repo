@@ -2,7 +2,9 @@
   <div class="bigwrap">
     <main-header />
     <v-app class="dinamic-view">
-      <router-view></router-view>
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
     </v-app>
     <main-footer />
   </div>

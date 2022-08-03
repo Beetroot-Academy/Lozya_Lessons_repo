@@ -14,32 +14,37 @@ const routes = [
     path: "/",
     name: "home",
     component: MainPage,
+    meta: { keepAlive: true },
   },
 
   {
     path: "/all",
     name: "all",
     component: GamesLayout,
+    meta: { keepAlive: true },
     children: [
       {
         path: "",
-        // name: "all-games",
         component: AllGamesPage,
+        meta: { keepAlive: true },
       },
       {
         path: ":id",
         name: "game-page",
         component: GamePage,
+        meta: { keepAlive: true },
       },
       {
         path: "/search",
         name: "search",
         component: SearchGames,
+        meta: { keepAlive: true },
       },
       {
         path: "/about",
         name: "about-us",
         component: AboutUs,
+        meta: { keepAlive: true },
       },
     ],
     scrollBehavior() {
